@@ -16,6 +16,7 @@ size = Vector2(1, 1)
 
 [node name="CharacterBody2D" type="CharacterBody2D" parent="." unique_id=1669504373]
 script = ExtResource("1_nxogm")
+extra_jumps = 1
 
 [node name="Sprite2D" type="Sprite2D" parent="CharacterBody2D" unique_id=1489925236]
 texture = ExtResource("1_ulcgi")

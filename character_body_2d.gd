@@ -1,9 +1,11 @@
 extends CharacterBody2D
 
 @export var knockback = 0
+@export var extra_jumps = 2
+
 const SPEED = 300.0
-const JUMP_VELOCITY = -400.0
-var Double_jump : bool = false
+const JUMP_VELOCITY = -500.0
+var Double_jump_count : int = 0
 func _physics_process(delta: float) -> void:
 	# Add the gravity.
 	if not is_on_floor():
@@ -13,10 +15,10 @@ func _physics_process(delta: float) -> void:
 	if Input.is_action_just_pressed("Jump"):
 		if is_on_floor():
 			velocity.y = JUMP_VELOCITY
-			Double_jump = false
-		elif not Double_jump:
+			Double_jump_count = 0
+		elif not Double_jump_count >= extra_jumps:
 			velocity.y = JUMP_VELOCITY
-			Double_jump = true
+			Double_jump_count += 1
 
 	# Get the input direction and handle the movement/deceleration.
 	# As good practice, you should replace UI actions with custom gameplay actions.
