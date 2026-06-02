@@ -5,22 +5,19 @@
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_hunim"]
 size = Vector2(384, 20)
 
+[sub_resource type="QuadMesh" id="QuadMesh_hunim"]
+
 [node name="Node2D" type="Node2D" unique_id=2101625577]
-position = Vector2(643, 460)
 
-[node name="CharacterBody2D" parent="." unique_id=142461306 instance=ExtResource("1_hunim")]
+[node name="CharacterBody2D2" parent="." unique_id=142461306 instance=ExtResource("1_hunim")]
 position = Vector2(0, -103)
-script = null
 
-[node name="Area2D" type="Area2D" parent="." unique_id=160365863]
+[node name="StaticBody2D" type="StaticBody2D" parent="." unique_id=27430171]
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=393426004]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D" unique_id=393426004]
 shape = SubResource("RectangleShape2D_hunim")
 debug_color = Color(0, 0.6, 0.69803923, 0.41568628)
 
-[node name="ColorRect" type="ColorRect" parent="Area2D" unique_id=477938113]
-offset_left = -192.0
-offset_top = -10.0
-offset_right = 192.0
-offset_bottom = 10.0
-metadata/_edit_use_anchors_ = true
+[node name="MeshInstance2D" type="MeshInstance2D" parent="StaticBody2D" unique_id=1704214878]
+scale = Vector2(383.99997, 22)
+mesh = SubResource("QuadMesh_hunim")

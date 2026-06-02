@@ -9,7 +9,7 @@ var Double_jump_count := 0
 var playerheight := 0
 
 func _ready() -> void:
-	position = Vector2(640,400)
+	pass
 
 func _physics_process(delta: float) -> void:
 	# Add the gravity.
