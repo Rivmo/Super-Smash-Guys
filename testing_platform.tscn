@@ -3,9 +3,8 @@
 [ext_resource type="Script" uid="uid://d04an3o5m77vi" path="res://player_character.gd" id="1_8lfag"]
 [ext_resource type="Texture2D" uid="uid://c5j48tkuyi5y7" path="res://capsule.png" id="2_h84d3"]
 
-[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_nxogm"]
-radius = 67.49999
-height = 260.0
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_8lfag"]
+size = Vector2(142.5, 270)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_3253y"]
 size = Vector2(0.577, 0.5499997)
@@ -15,6 +14,7 @@ size = Vector2(0.577, 0.5499997)
 [node name="Scene" type="Node2D" unique_id=1760709768]
 
 [node name="CharacterBody2D" type="CharacterBody2D" parent="." unique_id=1669504373]
+position = Vector2(-2, 18)
 script = ExtResource("1_8lfag")
 extra_jumps = 1
 
@@ -24,9 +24,9 @@ scale = Vector2(0.4, 0.4)
 texture = ExtResource("2_h84d3")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="CharacterBody2D" unique_id=1768581945]
-position = Vector2(-64, 236)
+position = Vector2(-63.5, 235)
 scale = Vector2(0.4, 0.4)
-shape = SubResource("CapsuleShape2D_nxogm")
+shape = SubResource("RectangleShape2D_8lfag")
 
 [node name="StaticBody2D" type="StaticBody2D" parent="." unique_id=1904787199]
 position = Vector2(640, 640)
