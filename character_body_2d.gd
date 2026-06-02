@@ -6,6 +6,10 @@ extends CharacterBody2D
 const SPEED = 300.0
 const JUMP_VELOCITY = -500.0
 var Double_jump_count : int = 0
+
+func _ready() -> void:
+	position = Vector2(640,400)
+
 func _physics_process(delta: float) -> void:
 	# Add the gravity.
 	if not is_on_floor():
