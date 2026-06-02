@@ -1,13 +1,14 @@
 [gd_scene format=3 uid="uid://ddxsvct2mkmnn"]
 
-[node name="Control" type="Control" unique_id=1049558189]
+[ext_resource type="Script" uid="uid://cfmf5ciiwpqwf" path="res://practice.gd" id="1_0fbet"]
+
+[node name="Main Menu" type="Control" unique_id=1049558189]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-metadata/_edit_lock_ = true
 
 [node name="ColorRect" type="ColorRect" parent="." unique_id=1097477698]
 layout_mode = 1
@@ -17,47 +18,6 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 color = Color(0.84977525, 0.56186223, 0.42118737, 1)
-
-[node name="CenterContainer" type="CenterContainer" parent="." unique_id=589413291]
-layout_mode = 1
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
-
-[node name="VBoxContainer" type="VBoxContainer" parent="CenterContainer" unique_id=605720243]
-layout_mode = 2
-
-[node name="Multiplayer" type="Label" parent="CenterContainer/VBoxContainer" unique_id=1848418524]
-layout_mode = 2
-size_flags_horizontal = 4
-theme_override_font_sizes/font_size = 34
-text = "Multiplayer"
-
-[node name="Practice" type="Label" parent="CenterContainer/VBoxContainer" unique_id=304532510]
-layout_mode = 2
-size_flags_horizontal = 4
-theme_override_font_sizes/font_size = 34
-text = "Practice"
-
-[node name="Settings" type="Label" parent="CenterContainer/VBoxContainer" unique_id=472388248]
-layout_mode = 2
-size_flags_horizontal = 4
-theme_override_font_sizes/font_size = 34
-text = "Settings"
-
-[node name="Credits" type="Label" parent="CenterContainer/VBoxContainer" unique_id=835076978]
-layout_mode = 2
-size_flags_horizontal = 4
-theme_override_font_sizes/font_size = 34
-text = "Credits"
-
-[node name="Exit" type="Label" parent="CenterContainer/VBoxContainer" unique_id=1955850829]
-layout_mode = 2
-size_flags_horizontal = 4
-theme_override_font_sizes/font_size = 34
-text = "Exit"
 
 [node name="MarginContainer" type="MarginContainer" parent="." unique_id=2026939353]
 layout_mode = 1
@@ -75,3 +35,46 @@ layout_mode = 2
 size_flags_horizontal = 4
 theme_override_font_sizes/font_size = 70
 text = "Super Smash Guys"
+
+[node name="VBoxContainer" type="VBoxContainer" parent="." unique_id=605720243]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -94.0
+offset_top = -125.5
+offset_right = 94.0
+offset_bottom = 125.5
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 4
+
+[node name="Multiplayer" type="Button" parent="VBoxContainer" unique_id=1560336704]
+layout_mode = 2
+theme_override_font_sizes/font_size = 30
+text = "Multiplayer"
+
+[node name="Practice" type="Button" parent="VBoxContainer" unique_id=867438607]
+layout_mode = 2
+theme_override_font_sizes/font_size = 30
+text = "Practice"
+script = ExtResource("1_0fbet")
+
+[node name="Settings" type="Button" parent="VBoxContainer" unique_id=79877832]
+layout_mode = 2
+theme_override_font_sizes/font_size = 30
+text = "Settings"
+
+[node name="Credits" type="Button" parent="VBoxContainer" unique_id=1289616389]
+layout_mode = 2
+theme_override_font_sizes/font_size = 30
+text = "Credits"
+
+[node name="Exit" type="Button" parent="VBoxContainer" unique_id=2071948664]
+layout_mode = 2
+theme_override_font_sizes/font_size = 30
+text = "Exit"
+
+[connection signal="pressed" from="VBoxContainer/Practice" to="VBoxContainer/Practice" method="_on_pressed"]
