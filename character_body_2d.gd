@@ -3,10 +3,9 @@ extends CharacterBody2D
 @export var knockback = 0
 @export var extra_jumps = 2
 
-const SPEED := 300.0
-const JUMP_VELOCITY := -500.0
-var Double_jump_count := 0
-var playerheight := 0
+const SPEED = 300.0
+const JUMP_VELOCITY = -500.0
+var Double_jump_count : int = 0
 
 func _ready() -> void:
 	position = Vector2(640,400)
@@ -15,8 +14,6 @@ func _physics_process(delta: float) -> void:
 	# Add the gravity.
 	if not is_on_floor():
 		velocity += get_gravity() * delta
-
-	
 
 	# Handle jump.
 	if Input.is_action_just_pressed("Jump"):
