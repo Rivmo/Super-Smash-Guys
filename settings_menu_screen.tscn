@@ -1,0 +1,237 @@
+[gd_scene format=3 uid="uid://b7l4vewmcw08s"]
+
+[node name="Control" type="Control" unique_id=251010454]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=1216308917]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.84977525, 0.56186223, 0.42118737, 1)
+
+[node name="MarginContainer" type="MarginContainer" parent="." unique_id=427019897]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -312.5
+offset_right = 312.5
+grow_horizontal = 2
+theme_override_constants/margin_top = 22
+
+[node name="Title" type="Label" parent="MarginContainer" unique_id=569661956]
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_font_sizes/font_size = 70
+text = "Settings"
+
+[node name="MarginContainer2" type="MarginContainer" parent="." unique_id=869049621]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -184.0
+offset_right = 184.0
+offset_bottom = 612.0
+grow_horizontal = 2
+theme_override_constants/margin_top = 140
+
+[node name="ScrollContainer" type="ScrollContainer" parent="MarginContainer2" unique_id=41847902]
+layout_mode = 2
+
+[node name="HBoxContainer" type="HBoxContainer" parent="MarginContainer2/ScrollContainer" unique_id=743022189]
+layout_mode = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer2/ScrollContainer/HBoxContainer" unique_id=190285162]
+layout_mode = 2
+
+[node name="Button" type="Button" parent="MarginContainer2/ScrollContainer/HBoxContainer/VBoxContainer" unique_id=2144123375]
+layout_mode = 2
+theme_override_font_sizes/font_size = 26
+text = "Option Select"
+
+[node name="Button2" type="Button" parent="MarginContainer2/ScrollContainer/HBoxContainer/VBoxContainer" unique_id=1516350471]
+layout_mode = 2
+theme_override_font_sizes/font_size = 26
+text = "Option Select"
+
+[node name="Button3" type="Button" parent="MarginContainer2/ScrollContainer/HBoxContainer/VBoxContainer" unique_id=118276847]
+layout_mode = 2
+theme_override_font_sizes/font_size = 26
+text = "Option Select"
+
+[node name="Button4" type="Button" parent="MarginContainer2/ScrollContainer/HBoxContainer/VBoxContainer" unique_id=367931680]
+layout_mode = 2
+theme_override_font_sizes/font_size = 26
+text = "Option Select"
+
+[node name="Button5" type="Button" parent="MarginContainer2/ScrollContainer/HBoxContainer/VBoxContainer" unique_id=1035040512]
+layout_mode = 2
+theme_override_font_sizes/font_size = 26
+text = "Option Select"
+
+[node name="Button6" type="Button" parent="MarginContainer2/ScrollContainer/HBoxContainer/VBoxContainer" unique_id=1785049292]
+layout_mode = 2
+theme_override_font_sizes/font_size = 26
+text = "Option Select"
+
+[node name="Button7" type="Button" parent="MarginContainer2/ScrollContainer/HBoxContainer/VBoxContainer" unique_id=1455438065]
+layout_mode = 2
+theme_override_font_sizes/font_size = 26
+text = "Option Select"
+
+[node name="Button8" type="Button" parent="MarginContainer2/ScrollContainer/HBoxContainer/VBoxContainer" unique_id=763049010]
+layout_mode = 2
+theme_override_font_sizes/font_size = 26
+text = "Option Select"
+
+[node name="Button9" type="Button" parent="MarginContainer2/ScrollContainer/HBoxContainer/VBoxContainer" unique_id=1359499120]
+layout_mode = 2
+theme_override_font_sizes/font_size = 26
+text = "Option Select"
+
+[node name="Button10" type="Button" parent="MarginContainer2/ScrollContainer/HBoxContainer/VBoxContainer" unique_id=1335591159]
+layout_mode = 2
+theme_override_font_sizes/font_size = 26
+text = "Option Select"
+
+[node name="Button11" type="Button" parent="MarginContainer2/ScrollContainer/HBoxContainer/VBoxContainer" unique_id=1341200130]
+layout_mode = 2
+theme_override_font_sizes/font_size = 26
+text = "Option Select"
+
+[node name="Button12" type="Button" parent="MarginContainer2/ScrollContainer/HBoxContainer/VBoxContainer" unique_id=1775126072]
+layout_mode = 2
+theme_override_font_sizes/font_size = 26
+text = "Option Select"
+
+[node name="Button13" type="Button" parent="MarginContainer2/ScrollContainer/HBoxContainer/VBoxContainer" unique_id=1614518892]
+layout_mode = 2
+theme_override_font_sizes/font_size = 26
+text = "Option Select"
+
+[node name="Button14" type="Button" parent="MarginContainer2/ScrollContainer/HBoxContainer/VBoxContainer" unique_id=637673482]
+layout_mode = 2
+theme_override_font_sizes/font_size = 26
+text = "Option Select"
+
+[node name="Button15" type="Button" parent="MarginContainer2/ScrollContainer/HBoxContainer/VBoxContainer" unique_id=565309553]
+layout_mode = 2
+theme_override_font_sizes/font_size = 26
+text = "Option Select"
+
+[node name="Button16" type="Button" parent="MarginContainer2/ScrollContainer/HBoxContainer/VBoxContainer" unique_id=1911128565]
+layout_mode = 2
+theme_override_font_sizes/font_size = 26
+text = "Option Select"
+
+[node name="Button17" type="Button" parent="MarginContainer2/ScrollContainer/HBoxContainer/VBoxContainer" unique_id=1304942419]
+layout_mode = 2
+theme_override_font_sizes/font_size = 26
+text = "Option Select"
+
+[node name="Button18" type="Button" parent="MarginContainer2/ScrollContainer/HBoxContainer/VBoxContainer" unique_id=207469909]
+layout_mode = 2
+theme_override_font_sizes/font_size = 26
+text = "Option Select"
+
+[node name="VBoxContainer2" type="VBoxContainer" parent="MarginContainer2/ScrollContainer/HBoxContainer" unique_id=145591772]
+layout_mode = 2
+
+[node name="Button" type="Button" parent="MarginContainer2/ScrollContainer/HBoxContainer/VBoxContainer2" unique_id=634531390]
+layout_mode = 2
+theme_override_font_sizes/font_size = 26
+text = "Option Select"
+
+[node name="Button2" type="Button" parent="MarginContainer2/ScrollContainer/HBoxContainer/VBoxContainer2" unique_id=2097777277]
+layout_mode = 2
+theme_override_font_sizes/font_size = 26
+text = "Option Select"
+
+[node name="Button3" type="Button" parent="MarginContainer2/ScrollContainer/HBoxContainer/VBoxContainer2" unique_id=1608135718]
+layout_mode = 2
+theme_override_font_sizes/font_size = 26
+text = "Option Select"
+
+[node name="Button4" type="Button" parent="MarginContainer2/ScrollContainer/HBoxContainer/VBoxContainer2" unique_id=1631974679]
+layout_mode = 2
+theme_override_font_sizes/font_size = 26
+text = "Option Select"
+
+[node name="Button5" type="Button" parent="MarginContainer2/ScrollContainer/HBoxContainer/VBoxContainer2" unique_id=409271516]
+layout_mode = 2
+theme_override_font_sizes/font_size = 26
+text = "Option Select"
+
+[node name="Button6" type="Button" parent="MarginContainer2/ScrollContainer/HBoxContainer/VBoxContainer2" unique_id=1667309152]
+layout_mode = 2
+theme_override_font_sizes/font_size = 26
+text = "Option Select"
+
+[node name="Button7" type="Button" parent="MarginContainer2/ScrollContainer/HBoxContainer/VBoxContainer2" unique_id=1756874815]
+layout_mode = 2
+theme_override_font_sizes/font_size = 26
+text = "Option Select"
+
+[node name="Button8" type="Button" parent="MarginContainer2/ScrollContainer/HBoxContainer/VBoxContainer2" unique_id=339685096]
+layout_mode = 2
+theme_override_font_sizes/font_size = 26
+text = "Option Select"
+
+[node name="Button9" type="Button" parent="MarginContainer2/ScrollContainer/HBoxContainer/VBoxContainer2" unique_id=921374884]
+layout_mode = 2
+theme_override_font_sizes/font_size = 26
+text = "Option Select"
+
+[node name="Button10" type="Button" parent="MarginContainer2/ScrollContainer/HBoxContainer/VBoxContainer2" unique_id=380134929]
+layout_mode = 2
+theme_override_font_sizes/font_size = 26
+text = "Option Select"
+
+[node name="Button11" type="Button" parent="MarginContainer2/ScrollContainer/HBoxContainer/VBoxContainer2" unique_id=10535036]
+layout_mode = 2
+theme_override_font_sizes/font_size = 26
+text = "Option Select"
+
+[node name="Button12" type="Button" parent="MarginContainer2/ScrollContainer/HBoxContainer/VBoxContainer2" unique_id=41460703]
+layout_mode = 2
+theme_override_font_sizes/font_size = 26
+text = "Option Select"
+
+[node name="Button13" type="Button" parent="MarginContainer2/ScrollContainer/HBoxContainer/VBoxContainer2" unique_id=742910579]
+layout_mode = 2
+theme_override_font_sizes/font_size = 26
+text = "Option Select"
+
+[node name="Button14" type="Button" parent="MarginContainer2/ScrollContainer/HBoxContainer/VBoxContainer2" unique_id=843165653]
+layout_mode = 2
+theme_override_font_sizes/font_size = 26
+text = "Option Select"
+
+[node name="Button15" type="Button" parent="MarginContainer2/ScrollContainer/HBoxContainer/VBoxContainer2" unique_id=1617687618]
+layout_mode = 2
+theme_override_font_sizes/font_size = 26
+text = "Option Select"
+
+[node name="Button16" type="Button" parent="MarginContainer2/ScrollContainer/HBoxContainer/VBoxContainer2" unique_id=1820695845]
+layout_mode = 2
+theme_override_font_sizes/font_size = 26
+text = "Option Select"
+
+[node name="Button17" type="Button" parent="MarginContainer2/ScrollContainer/HBoxContainer/VBoxContainer2" unique_id=575980860]
+layout_mode = 2
+theme_override_font_sizes/font_size = 26
+text = "Option Select"
+
+[node name="Button18" type="Button" parent="MarginContainer2/ScrollContainer/HBoxContainer/VBoxContainer2" unique_id=413864141]
+layout_mode = 2
+theme_override_font_sizes/font_size = 26
+text = "Option Select"

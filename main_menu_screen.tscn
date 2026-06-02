@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://ddxsvct2mkmnn"]
 
-[ext_resource type="Script" uid="uid://cfmf5ciiwpqwf" path="res://practice.gd" id="1_0fbet"]
+[ext_resource type="Script" uid="uid://bds4p1kk6kofw" path="res://main_menu_screen.gd" id="1_vg6dg"]
 
 [node name="Main Menu" type="Control" unique_id=1049558189]
 layout_mode = 3
@@ -9,6 +9,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+script = ExtResource("1_vg6dg")
 
 [node name="ColorRect" type="ColorRect" parent="." unique_id=1097477698]
 layout_mode = 1
@@ -60,7 +61,6 @@ text = "Multiplayer"
 layout_mode = 2
 theme_override_font_sizes/font_size = 30
 text = "Practice"
-script = ExtResource("1_0fbet")
 
 [node name="Settings" type="Button" parent="VBoxContainer" unique_id=79877832]
 layout_mode = 2
@@ -77,4 +77,6 @@ layout_mode = 2
 theme_override_font_sizes/font_size = 30
 text = "Exit"
 
+[connection signal="pressed" from="VBoxContainer/Practice" to="." method="_on_practice_pressed"]
 [connection signal="pressed" from="VBoxContainer/Practice" to="VBoxContainer/Practice" method="_on_pressed"]
+[connection signal="pressed" from="VBoxContainer/Settings" to="." method="_on_settings_pressed"]
