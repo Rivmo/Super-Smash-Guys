@@ -10,8 +10,21 @@ const JUMP_VELOCITY := -500.0
 var Double_jump_count := 0
 var playerheight := 0
 var Facing := 1
+#time between "o" button punch attack
+const attack_delay = 2
+var attack_delay_absolute_time = 0
+var attack_avalible := true
+
 func _ready() -> void:
-	pass
+	position = Vector2(640,450)
+	
+func _process(delta: float) -> void:
+	if attack_avalible != true:
+		attack_delay_absolute_time += 1 * delta
+	print(attack_delay_absolute_time)
+	if attack_delay_absolute_time >= attack_delay:
+		attack_delay_absolute_time = 0
+		attack_avalible = true
 
 func _physics_process(delta: float) -> void:
 	# Add the gravity.
@@ -38,7 +51,8 @@ func _physics_process(delta: float) -> void:
 	else:
 		velocity.x = move_toward(velocity.x, 0, SPEED)
 	
-	if Input.is_action_just_pressed("Attack"):
+	if Input.is_action_just_pressed("Attack") and attack_avalible == true:
 		Attack.emit(Facing)
+		attack_avalible = false
 	
 	move_and_slide()

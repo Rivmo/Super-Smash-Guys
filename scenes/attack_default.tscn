@@ -5,6 +5,7 @@
 [sub_resource type="QuadMesh" id="QuadMesh_qnuwd"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_2g375"]
+size = Vector2(38, 38)
 
 [node name="attack" type="Node2D" unique_id=1478860268]
 script = ExtResource("1_2g375")
@@ -12,7 +13,8 @@ script = ExtResource("1_2g375")
 [node name="Area2D" type="Area2D" parent="." unique_id=1332334761]
 
 [node name="MeshInstance2D" type="MeshInstance2D" parent="Area2D" unique_id=1925545710]
-scale = Vector2(20, 20)
+position = Vector2(9.536743e-07, 4.7683716e-07)
+scale = Vector2(38.000004, 38.000004)
 mesh = SubResource("QuadMesh_qnuwd")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=1007916745]
