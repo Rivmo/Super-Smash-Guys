@@ -15,9 +15,10 @@ func _ready() -> void:
 func _process(delta: float) -> void:
 	if time < move_time :
 		position.x += Movement_speed_time * delta
-		print(Movement_speed_time)
+
 		Movement_speed_time -= 2*Movement_speed/(move_time)
 		time += 1
+		
 	else:
 		self.free()
 	

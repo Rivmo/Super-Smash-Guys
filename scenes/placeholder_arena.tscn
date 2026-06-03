@@ -2,6 +2,7 @@
 
 [ext_resource type="Script" uid="uid://c74aoimcssv2o" path="res://scripts/placeholder_arena.gd" id="1_b24y5"]
 [ext_resource type="PackedScene" uid="uid://b0x3345qebl54" path="res://scenes/player_character.tscn" id="1_hunim"]
+[ext_resource type="PackedScene" uid="uid://cff2uoaxsga1o" path="res://scenes/Dummy.tscn" id="3_kadwe"]
 
 [sub_resource type="QuadMesh" id="QuadMesh_hunim"]
 
@@ -24,5 +25,8 @@ mesh = SubResource("QuadMesh_hunim")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D" unique_id=393426004]
 shape = SubResource("RectangleShape2D_hunim")
 debug_color = Color(0, 0.6, 0.69803923, 0.41568628)
+
+[node name="Node2D" parent="." unique_id=1693198927 instance=ExtResource("3_kadwe")]
+position = Vector2(750, 450)
 
 [connection signal="Attack" from="CharacterBody2D2" to="." method="_on_character_attack"]
