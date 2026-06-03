@@ -1,23 +1,28 @@
 [gd_scene format=3 uid="uid://bb30pb5nbr85r"]
 
+[ext_resource type="Script" uid="uid://c74aoimcssv2o" path="res://scripts/placeholder_arena.gd" id="1_b24y5"]
 [ext_resource type="PackedScene" uid="uid://b0x3345qebl54" path="res://scenes/player_character.tscn" id="1_hunim"]
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_hunim"]
-size = Vector2(384, 20)
 
 [sub_resource type="QuadMesh" id="QuadMesh_hunim"]
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_hunim"]
+size = Vector2(384, 22)
+
 [node name="Node2D" type="Node2D" unique_id=2101625577]
+script = ExtResource("1_b24y5")
 
 [node name="CharacterBody2D2" parent="." unique_id=142461306 instance=ExtResource("1_hunim")]
-position = Vector2(0, -103)
+position = Vector2(640, 320)
 
 [node name="StaticBody2D" type="StaticBody2D" parent="." unique_id=27430171]
+position = Vector2(640, 500)
+
+[node name="MeshInstance2D" type="MeshInstance2D" parent="StaticBody2D" unique_id=1704214878]
+scale = Vector2(383.99997, 22)
+mesh = SubResource("QuadMesh_hunim")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D" unique_id=393426004]
 shape = SubResource("RectangleShape2D_hunim")
 debug_color = Color(0, 0.6, 0.69803923, 0.41568628)
 
-[node name="MeshInstance2D" type="MeshInstance2D" parent="StaticBody2D" unique_id=1704214878]
-scale = Vector2(383.99997, 22)
-mesh = SubResource("QuadMesh_hunim")
+[connection signal="Attack" from="CharacterBody2D2" to="." method="_on_character_attack"]

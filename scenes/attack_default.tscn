@@ -1,0 +1,19 @@
+[gd_scene format=3 uid="uid://h4an4uvxsnha"]
+
+[ext_resource type="Script" uid="uid://cwekqexgo01ay" path="res://scripts/attack_default.gd" id="1_2g375"]
+
+[sub_resource type="QuadMesh" id="QuadMesh_qnuwd"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_2g375"]
+
+[node name="attack" type="Node2D" unique_id=1478860268]
+script = ExtResource("1_2g375")
+
+[node name="Area2D" type="Area2D" parent="." unique_id=1332334761]
+
+[node name="MeshInstance2D" type="MeshInstance2D" parent="Area2D" unique_id=1925545710]
+scale = Vector2(20, 20)
+mesh = SubResource("QuadMesh_qnuwd")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=1007916745]
+shape = SubResource("RectangleShape2D_2g375")
