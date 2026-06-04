@@ -12,7 +12,7 @@ size = Vector2(1100, 65)
 [node name="Node2D" type="Node2D" unique_id=2101625577]
 script = ExtResource("1_b24y5")
 
-[node name="CharacterBody2D2" parent="." unique_id=142461306 instance=ExtResource("1_hunim")]
+[node name="Player" parent="." unique_id=142461306 instance=ExtResource("1_hunim")]
 position = Vector2(556, -70)
 
 [node name="StaticBody2D" type="StaticBody2D" parent="." unique_id=27430171]
@@ -28,7 +28,7 @@ position = Vector2(11, 132.5)
 shape = SubResource("RectangleShape2D_hunim")
 debug_color = Color(0, 0.6, 0.69803923, 0.41568628)
 
-[node name="Node2D" parent="." unique_id=1693198927 instance=ExtResource("3_kadwe")]
+[node name="Dummy" parent="." unique_id=1693198927 instance=ExtResource("3_kadwe")]
 position = Vector2(749, 377)
 
-[connection signal="Attack" from="CharacterBody2D2" to="." method="_on_character_attack"]
+[connection signal="Attack" from="Player" to="." method="_on_character_attack"]

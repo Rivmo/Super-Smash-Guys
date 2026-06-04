@@ -19,3 +19,5 @@ mesh = SubResource("QuadMesh_qnuwd")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=1007916745]
 shape = SubResource("RectangleShape2D_2g375")
+
+[connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]

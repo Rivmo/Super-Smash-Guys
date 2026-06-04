@@ -1,7 +1,10 @@
 extends CharacterBody2D
 
+#no use
 @export var knockback = 0
-@export var extra_jumps = 2
+@export var extra_jumps = 1
+#time between punch attack in seconds
+@export var attack_delay = 2
 
 signal Attack(pos, dir)
 
@@ -9,9 +12,7 @@ const SPEED := 300.0
 const JUMP_VELOCITY := -500.0
 var Double_jump_count := 0
 var playerheight := 0
-var Facing := 1
-#time between "o" button punch attack
-const attack_delay = 2
+var Facing = 1
 var attack_delay_absolute_time = 0
 var attack_avalible := true
 
@@ -21,7 +22,6 @@ func _ready() -> void:
 func _process(delta: float) -> void:
 	if attack_avalible != true:
 		attack_delay_absolute_time += 1 * delta
-	print(attack_delay_absolute_time)
 	if attack_delay_absolute_time >= attack_delay:
 		attack_delay_absolute_time = 0
 		attack_avalible = true

@@ -9,7 +9,7 @@ func _ready() -> void:
 func _on_character_attack(dir: int) -> void:
 	var attack = attack_scene.instantiate()
 	attack.dir = dir
-	$CharacterBody2D2.add_child(attack)
+	$Player.add_child(attack)
 	
 	
 	
