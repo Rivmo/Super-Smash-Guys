@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://b7l4vewmcw08s"]
 
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
 [ext_resource type="Script" uid="uid://bds4p1kk6kofw" path="res://scripts/main_menu_screen.gd" id="1_cie3p"]
 
 [node name="Control" type="Control" unique_id=251010454]
@@ -122,6 +123,7 @@ flat = true
 layout_mode = 2
 
 [node name="HBoxContainer" type="HBoxContainer" parent="ScrollContainer/VBoxContainer/PanelContainer2" unique_id=5295650]
+<<<<<<< Updated upstream
 layout_mode = 2
 
 [node name="Button" type="Button" parent="ScrollContainer/VBoxContainer/PanelContainer2/HBoxContainer" unique_id=297589678]
@@ -204,6 +206,135 @@ text = "Exit"
 
 [connection signal="pressed" from="Exit_settings" to="." method="_on_exit_settings_pressed"]
 =======
+
+[node name="Button" type="Button" parent="ScrollContainer/VBoxContainer/PanelContainer8/HBoxContainer" unique_id=2066965060]
+custom_minimum_size = Vector2(0, 50)
+layout_mode = 2
+flat = true
+
+[node name="PanelContainer9" type="PanelContainer" parent="ScrollContainer/VBoxContainer" unique_id=1169390607]
+layout_mode = 2
+
+[node name="HBoxContainer" type="HBoxContainer" parent="ScrollContainer/VBoxContainer/PanelContainer9" unique_id=1119549657]
+layout_mode = 2
+
+[node name="Button" type="Button" parent="ScrollContainer/VBoxContainer/PanelContainer9/HBoxContainer" unique_id=1646338654]
+custom_minimum_size = Vector2(0, 50)
+layout_mode = 2
+flat = true
+
+[node name="PanelContainer10" type="PanelContainer" parent="ScrollContainer/VBoxContainer" unique_id=149441541]
+layout_mode = 2
+
+[node name="HBoxContainer" type="HBoxContainer" parent="ScrollContainer/VBoxContainer/PanelContainer10" unique_id=1951383362]
+layout_mode = 2
+
+[node name="Button" type="Button" parent="ScrollContainer/VBoxContainer/PanelContainer10/HBoxContainer" unique_id=1380818929]
+custom_minimum_size = Vector2(0, 50)
+layout_mode = 2
+flat = true
+
+[node name="PanelContainer11" type="PanelContainer" parent="ScrollContainer/VBoxContainer" unique_id=1710277791]
+layout_mode = 2
+
+[node name="HBoxContainer" type="HBoxContainer" parent="ScrollContainer/VBoxContainer/PanelContainer11" unique_id=1169233699]
+layout_mode = 2
+
+[node name="Button" type="Button" parent="ScrollContainer/VBoxContainer/PanelContainer11/HBoxContainer" unique_id=218568601]
+custom_minimum_size = Vector2(0, 50)
+layout_mode = 2
+flat = true
+
+[node name="PanelContainer12" type="PanelContainer" parent="ScrollContainer/VBoxContainer" unique_id=207771442]
+layout_mode = 2
+
+[node name="HBoxContainer" type="HBoxContainer" parent="ScrollContainer/VBoxContainer/PanelContainer12" unique_id=1618881505]
+layout_mode = 2
+
+[node name="Button" type="Button" parent="ScrollContainer/VBoxContainer/PanelContainer12/HBoxContainer" unique_id=615157284]
+custom_minimum_size = Vector2(0, 50)
+layout_mode = 2
+flat = true
+
+[node name="PanelContainer13" type="PanelContainer" parent="ScrollContainer/VBoxContainer" unique_id=780710634]
+layout_mode = 2
+
+[node name="HBoxContainer" type="HBoxContainer" parent="ScrollContainer/VBoxContainer/PanelContainer13" unique_id=1610386639]
+layout_mode = 2
+
+[node name="Button" type="Button" parent="ScrollContainer/VBoxContainer/PanelContainer13/HBoxContainer" unique_id=245912883]
+custom_minimum_size = Vector2(0, 50)
+layout_mode = 2
+flat = true
+>>>>>>> Stashed changes
+=======
+layout_mode = 2
+
+[node name="Button" type="Button" parent="ScrollContainer/VBoxContainer/PanelContainer2/HBoxContainer" unique_id=297589678]
+custom_minimum_size = Vector2(0, 50)
+layout_mode = 2
+flat = true
+
+[node name="PanelContainer3" type="PanelContainer" parent="ScrollContainer/VBoxContainer" unique_id=1226448906]
+layout_mode = 2
+
+[node name="HBoxContainer" type="HBoxContainer" parent="ScrollContainer/VBoxContainer/PanelContainer3" unique_id=198704861]
+layout_mode = 2
+
+[node name="Button" type="Button" parent="ScrollContainer/VBoxContainer/PanelContainer3/HBoxContainer" unique_id=182066537]
+custom_minimum_size = Vector2(0, 50)
+layout_mode = 2
+flat = true
+
+[node name="PanelContainer4" type="PanelContainer" parent="ScrollContainer/VBoxContainer" unique_id=1688991837]
+layout_mode = 2
+
+[node name="HBoxContainer" type="HBoxContainer" parent="ScrollContainer/VBoxContainer/PanelContainer4" unique_id=132567128]
+layout_mode = 2
+
+[node name="Button" type="Button" parent="ScrollContainer/VBoxContainer/PanelContainer4/HBoxContainer" unique_id=1655948426]
+custom_minimum_size = Vector2(0, 50)
+layout_mode = 2
+flat = true
+
+[node name="PanelContainer5" type="PanelContainer" parent="ScrollContainer/VBoxContainer" unique_id=188943279]
+layout_mode = 2
+
+[node name="HBoxContainer" type="HBoxContainer" parent="ScrollContainer/VBoxContainer/PanelContainer5" unique_id=1806490314]
+layout_mode = 2
+
+[node name="Button" type="Button" parent="ScrollContainer/VBoxContainer/PanelContainer5/HBoxContainer" unique_id=831635778]
+custom_minimum_size = Vector2(0, 50)
+layout_mode = 2
+flat = true
+
+[node name="PanelContainer6" type="PanelContainer" parent="ScrollContainer/VBoxContainer" unique_id=966672072]
+layout_mode = 2
+
+[node name="HBoxContainer" type="HBoxContainer" parent="ScrollContainer/VBoxContainer/PanelContainer6" unique_id=288172615]
+layout_mode = 2
+
+[node name="Button" type="Button" parent="ScrollContainer/VBoxContainer/PanelContainer6/HBoxContainer" unique_id=1051393627]
+custom_minimum_size = Vector2(0, 50)
+layout_mode = 2
+flat = true
+
+[node name="PanelContainer7" type="PanelContainer" parent="ScrollContainer/VBoxContainer" unique_id=120148167]
+layout_mode = 2
+
+[node name="HBoxContainer" type="HBoxContainer" parent="ScrollContainer/VBoxContainer/PanelContainer7" unique_id=1450519302]
+layout_mode = 2
+
+[node name="Button" type="Button" parent="ScrollContainer/VBoxContainer/PanelContainer7/HBoxContainer" unique_id=183989351]
+custom_minimum_size = Vector2(0, 50)
+layout_mode = 2
+flat = true
+
+[node name="PanelContainer8" type="PanelContainer" parent="ScrollContainer/VBoxContainer" unique_id=1514873916]
+layout_mode = 2
+
+[node name="HBoxContainer" type="HBoxContainer" parent="ScrollContainer/VBoxContainer/PanelContainer8" unique_id=513734189]
+layout_mode = 2
 
 [node name="Button" type="Button" parent="ScrollContainer/VBoxContainer/PanelContainer8/HBoxContainer" unique_id=2066965060]
 custom_minimum_size = Vector2(0, 50)
