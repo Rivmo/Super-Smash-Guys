@@ -81,4 +81,3 @@ text = "Exit"
 [connection signal="pressed" from="VBoxContainer/Practice" to="." method="_on_practice_pressed"]
 [connection signal="pressed" from="VBoxContainer/Practice" to="VBoxContainer/Practice" method="_on_pressed"]
 [connection signal="pressed" from="VBoxContainer/Settings" to="." method="_on_settings_pressed"]
-[connection signal="pressed" from="VBoxContainer/Exit" to="." method="_on_exit_pressed"]
