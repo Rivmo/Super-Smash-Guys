@@ -6,3 +6,6 @@ func _ready() -> void:
 
 func _on_join_pressed() -> void:
 	visible = true
+
+func _on_text_submitted(text: String) -> void:
+	print(text)
