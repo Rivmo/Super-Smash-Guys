@@ -3,7 +3,7 @@
 [ext_resource type="Script" uid="uid://bds4p1kk6kofw" path="res://scripts/main_menu_screen.gd" id="1_aqvks"]
 [ext_resource type="Script" uid="uid://o6coobbymf2x" path="res://scripts/join_text_box.gd" id="2_8g5g0"]
 
-[node name="Main Menu" type="Control" unique_id=1049558189]
+[node name="Multiplayer Menu" type="Control" unique_id=1049558189]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
