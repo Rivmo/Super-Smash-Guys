@@ -101,4 +101,5 @@ icon_alignment = 1
 [connection signal="Attack" from="Player" to="." method="_on_character_attack"]
 [connection signal="pressed" from="Control/ColorRect/VBoxContainer/Back to game" to="Control/ColorRect" method="_on_back_to_game_pressed"]
 [connection signal="pressed" from="Control/ColorRect/VBoxContainer/Exit to main menu" to="Control" method="_on_exit_to_main_menu_pressed"]
+[connection signal="pressed" from="Control/ColorRect/VBoxContainer/Exit Game" to="Control" method="_on_exit_game_pressed"]
 [connection signal="pressed" from="Control/Button" to="Control/ColorRect" method="_on_button_pressed"]

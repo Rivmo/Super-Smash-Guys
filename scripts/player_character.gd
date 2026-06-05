@@ -17,7 +17,7 @@ var attack_delay_absolute_time = 0
 var attack_avalible := true
 
 func _ready() -> void:
-	position = Vector2(640,450)
+	position = Vector2(240,450)
 	
 func _process(delta: float) -> void:
 	if attack_avalible != true:
