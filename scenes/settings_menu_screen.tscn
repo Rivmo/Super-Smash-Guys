@@ -10,6 +10,11 @@
 
 [node name="Settings Menu" type="Control" unique_id=251010454]
 >>>>>>> Stashed changes
+=======
+[ext_resource type="Script" uid="uid://c0yhdwe7dab23" path="res://scripts/settings_menu_screen.gd" id="1_cie3p"]
+
+[node name="Settings Menu" type="Control" unique_id=251010454]
+>>>>>>> Stashed changes
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
