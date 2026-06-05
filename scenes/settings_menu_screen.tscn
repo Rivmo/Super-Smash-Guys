@@ -3,9 +3,15 @@
 <<<<<<< Updated upstream
 <<<<<<< Updated upstream
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
 [ext_resource type="Script" uid="uid://bds4p1kk6kofw" path="res://scripts/main_menu_screen.gd" id="1_cie3p"]
 
 [node name="Control" type="Control" unique_id=251010454]
+=======
+[ext_resource type="Script" uid="uid://c0yhdwe7dab23" path="res://scripts/settings_menu_screen.gd" id="1_cie3p"]
+
+[node name="Settings Menu" type="Control" unique_id=251010454]
+>>>>>>> Stashed changes
 =======
 [ext_resource type="Script" uid="uid://c0yhdwe7dab23" path="res://scripts/settings_menu_screen.gd" id="1_cie3p"]
 
@@ -134,6 +140,7 @@ flat = true
 layout_mode = 2
 
 [node name="HBoxContainer" type="HBoxContainer" parent="ScrollContainer/VBoxContainer/PanelContainer2" unique_id=5295650]
+<<<<<<< Updated upstream
 <<<<<<< Updated upstream
 <<<<<<< Updated upstream
 layout_mode = 2
@@ -416,6 +423,75 @@ layout_mode = 2
 [node name="HBoxContainer" type="HBoxContainer" parent="ScrollContainer/VBoxContainer/PanelContainer8" unique_id=513734189]
 layout_mode = 2
 >>>>>>> Stashed changes
+=======
+layout_mode = 2
+
+[node name="Button" type="Button" parent="ScrollContainer/VBoxContainer/PanelContainer2/HBoxContainer" unique_id=297589678]
+custom_minimum_size = Vector2(0, 50)
+layout_mode = 2
+flat = true
+
+[node name="PanelContainer3" type="PanelContainer" parent="ScrollContainer/VBoxContainer" unique_id=1226448906]
+layout_mode = 2
+
+[node name="HBoxContainer" type="HBoxContainer" parent="ScrollContainer/VBoxContainer/PanelContainer3" unique_id=198704861]
+layout_mode = 2
+
+[node name="Button" type="Button" parent="ScrollContainer/VBoxContainer/PanelContainer3/HBoxContainer" unique_id=182066537]
+custom_minimum_size = Vector2(0, 50)
+layout_mode = 2
+flat = true
+
+[node name="PanelContainer4" type="PanelContainer" parent="ScrollContainer/VBoxContainer" unique_id=1688991837]
+layout_mode = 2
+
+[node name="HBoxContainer" type="HBoxContainer" parent="ScrollContainer/VBoxContainer/PanelContainer4" unique_id=132567128]
+layout_mode = 2
+
+[node name="Button" type="Button" parent="ScrollContainer/VBoxContainer/PanelContainer4/HBoxContainer" unique_id=1655948426]
+custom_minimum_size = Vector2(0, 50)
+layout_mode = 2
+flat = true
+
+[node name="PanelContainer5" type="PanelContainer" parent="ScrollContainer/VBoxContainer" unique_id=188943279]
+layout_mode = 2
+
+[node name="HBoxContainer" type="HBoxContainer" parent="ScrollContainer/VBoxContainer/PanelContainer5" unique_id=1806490314]
+layout_mode = 2
+
+[node name="Button" type="Button" parent="ScrollContainer/VBoxContainer/PanelContainer5/HBoxContainer" unique_id=831635778]
+custom_minimum_size = Vector2(0, 50)
+layout_mode = 2
+flat = true
+
+[node name="PanelContainer6" type="PanelContainer" parent="ScrollContainer/VBoxContainer" unique_id=966672072]
+layout_mode = 2
+
+[node name="HBoxContainer" type="HBoxContainer" parent="ScrollContainer/VBoxContainer/PanelContainer6" unique_id=288172615]
+layout_mode = 2
+
+[node name="Button" type="Button" parent="ScrollContainer/VBoxContainer/PanelContainer6/HBoxContainer" unique_id=1051393627]
+custom_minimum_size = Vector2(0, 50)
+layout_mode = 2
+flat = true
+
+[node name="PanelContainer7" type="PanelContainer" parent="ScrollContainer/VBoxContainer" unique_id=120148167]
+layout_mode = 2
+
+[node name="HBoxContainer" type="HBoxContainer" parent="ScrollContainer/VBoxContainer/PanelContainer7" unique_id=1450519302]
+layout_mode = 2
+
+[node name="Button" type="Button" parent="ScrollContainer/VBoxContainer/PanelContainer7/HBoxContainer" unique_id=183989351]
+custom_minimum_size = Vector2(0, 50)
+layout_mode = 2
+flat = true
+
+[node name="PanelContainer8" type="PanelContainer" parent="ScrollContainer/VBoxContainer" unique_id=1514873916]
+layout_mode = 2
+
+[node name="HBoxContainer" type="HBoxContainer" parent="ScrollContainer/VBoxContainer/PanelContainer8" unique_id=513734189]
+layout_mode = 2
+>>>>>>> Stashed changes
 
 [node name="Button" type="Button" parent="ScrollContainer/VBoxContainer/PanelContainer8/HBoxContainer" unique_id=2066965060]
 custom_minimum_size = Vector2(0, 50)
@@ -477,6 +553,9 @@ custom_minimum_size = Vector2(0, 50)
 layout_mode = 2
 flat = true
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
+>>>>>>> Stashed changes
+=======
 >>>>>>> Stashed changes
 =======
 >>>>>>> Stashed changes
