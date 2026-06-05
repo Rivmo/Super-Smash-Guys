@@ -1,8 +1,14 @@
 [gd_scene format=3 uid="uid://b7l4vewmcw08s"]
 
+<<<<<<< Updated upstream
 [ext_resource type="Script" uid="uid://bds4p1kk6kofw" path="res://scripts/main_menu_screen.gd" id="1_cie3p"]
 
 [node name="Control" type="Control" unique_id=251010454]
+=======
+[ext_resource type="Script" uid="uid://c0yhdwe7dab23" path="res://scripts/settings_menu_screen.gd" id="1_cie3p"]
+
+[node name="Settings Menu" type="Control" unique_id=251010454]
+>>>>>>> Stashed changes
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
@@ -19,6 +25,7 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 color = Color(0.84977525, 0.56186223, 0.42118737, 1)
+metadata/_edit_lock_ = true
 
 [node name="MarginContainer" type="MarginContainer" parent="." unique_id=427019897]
 layout_mode = 1
@@ -36,206 +43,153 @@ size_flags_horizontal = 4
 theme_override_font_sizes/font_size = 70
 text = "Settings"
 
-[node name="MarginContainer2" type="MarginContainer" parent="." unique_id=869049621]
+[node name="MarginContainer2" type="MarginContainer" parent="." unique_id=1657634197]
+layout_direction = 2
 layout_mode = 1
-anchors_preset = 5
+anchors_preset = 8
 anchor_left = 0.5
+anchor_top = 0.5
 anchor_right = 0.5
-offset_left = -184.0
-offset_right = 184.0
-offset_bottom = 612.0
+anchor_bottom = 0.5
+offset_left = -585.0
+offset_top = -190.0
+offset_right = -305.0
+offset_bottom = 203.0
 grow_horizontal = 2
-theme_override_constants/margin_top = 140
+grow_vertical = 2
 
-[node name="ScrollContainer" type="ScrollContainer" parent="MarginContainer2" unique_id=41847902]
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer2" unique_id=793028530]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+
+[node name="Button" type="Button" parent="MarginContainer2/VBoxContainer" unique_id=1064166925]
+layout_mode = 2
+size_flags_horizontal = 8
+theme_override_font_sizes/font_size = 45
+text = "General"
+
+[node name="Button2" type="Button" parent="MarginContainer2/VBoxContainer" unique_id=249233468]
+layout_mode = 2
+size_flags_horizontal = 8
+theme_override_font_sizes/font_size = 45
+text = "General"
+
+[node name="Button3" type="Button" parent="MarginContainer2/VBoxContainer" unique_id=1556858039]
+layout_mode = 2
+size_flags_horizontal = 8
+theme_override_font_sizes/font_size = 45
+text = "General"
+
+[node name="Button4" type="Button" parent="MarginContainer2/VBoxContainer" unique_id=1533968758]
+layout_mode = 2
+size_flags_horizontal = 8
+theme_override_font_sizes/font_size = 45
+text = "General"
+
+[node name="Button5" type="Button" parent="MarginContainer2/VBoxContainer" unique_id=1556690114]
+layout_mode = 2
+size_flags_horizontal = 8
+theme_override_font_sizes/font_size = 45
+text = "General"
+
+[node name="ScrollContainer" type="ScrollContainer" parent="." unique_id=2077631856]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.25078124
+anchor_top = 0.18194444
+anchor_right = 0.74921876
+anchor_bottom = 0.95694447
+metadata/_edit_use_anchors_ = true
+
+[node name="VBoxContainer" type="VBoxContainer" parent="ScrollContainer" unique_id=190285162]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="PanelContainer" type="PanelContainer" parent="ScrollContainer/VBoxContainer" unique_id=1571563871]
 layout_mode = 2
 
-[node name="HBoxContainer" type="HBoxContainer" parent="MarginContainer2/ScrollContainer" unique_id=743022189]
+[node name="HBoxContainer" type="HBoxContainer" parent="ScrollContainer/VBoxContainer/PanelContainer" unique_id=1113970822]
 layout_mode = 2
 
-[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer2/ScrollContainer/HBoxContainer" unique_id=190285162]
+[node name="Button" type="Button" parent="ScrollContainer/VBoxContainer/PanelContainer/HBoxContainer" unique_id=1113597925]
+custom_minimum_size = Vector2(0, 50)
+layout_mode = 2
+flat = true
+
+[node name="PanelContainer2" type="PanelContainer" parent="ScrollContainer/VBoxContainer" unique_id=79741179]
 layout_mode = 2
 
-[node name="Button" type="Button" parent="MarginContainer2/ScrollContainer/HBoxContainer/VBoxContainer" unique_id=2144123375]
-layout_mode = 2
-theme_override_font_sizes/font_size = 26
-text = "Option Select"
-
-[node name="Button2" type="Button" parent="MarginContainer2/ScrollContainer/HBoxContainer/VBoxContainer" unique_id=1516350471]
-layout_mode = 2
-theme_override_font_sizes/font_size = 26
-text = "Option Select"
-
-[node name="Button3" type="Button" parent="MarginContainer2/ScrollContainer/HBoxContainer/VBoxContainer" unique_id=118276847]
-layout_mode = 2
-theme_override_font_sizes/font_size = 26
-text = "Option Select"
-
-[node name="Button4" type="Button" parent="MarginContainer2/ScrollContainer/HBoxContainer/VBoxContainer" unique_id=367931680]
-layout_mode = 2
-theme_override_font_sizes/font_size = 26
-text = "Option Select"
-
-[node name="Button5" type="Button" parent="MarginContainer2/ScrollContainer/HBoxContainer/VBoxContainer" unique_id=1035040512]
-layout_mode = 2
-theme_override_font_sizes/font_size = 26
-text = "Option Select"
-
-[node name="Button6" type="Button" parent="MarginContainer2/ScrollContainer/HBoxContainer/VBoxContainer" unique_id=1785049292]
-layout_mode = 2
-theme_override_font_sizes/font_size = 26
-text = "Option Select"
-
-[node name="Button7" type="Button" parent="MarginContainer2/ScrollContainer/HBoxContainer/VBoxContainer" unique_id=1455438065]
-layout_mode = 2
-theme_override_font_sizes/font_size = 26
-text = "Option Select"
-
-[node name="Button8" type="Button" parent="MarginContainer2/ScrollContainer/HBoxContainer/VBoxContainer" unique_id=763049010]
-layout_mode = 2
-theme_override_font_sizes/font_size = 26
-text = "Option Select"
-
-[node name="Button9" type="Button" parent="MarginContainer2/ScrollContainer/HBoxContainer/VBoxContainer" unique_id=1359499120]
-layout_mode = 2
-theme_override_font_sizes/font_size = 26
-text = "Option Select"
-
-[node name="Button10" type="Button" parent="MarginContainer2/ScrollContainer/HBoxContainer/VBoxContainer" unique_id=1335591159]
-layout_mode = 2
-theme_override_font_sizes/font_size = 26
-text = "Option Select"
-
-[node name="Button11" type="Button" parent="MarginContainer2/ScrollContainer/HBoxContainer/VBoxContainer" unique_id=1341200130]
-layout_mode = 2
-theme_override_font_sizes/font_size = 26
-text = "Option Select"
-
-[node name="Button12" type="Button" parent="MarginContainer2/ScrollContainer/HBoxContainer/VBoxContainer" unique_id=1775126072]
-layout_mode = 2
-theme_override_font_sizes/font_size = 26
-text = "Option Select"
-
-[node name="Button13" type="Button" parent="MarginContainer2/ScrollContainer/HBoxContainer/VBoxContainer" unique_id=1614518892]
-layout_mode = 2
-theme_override_font_sizes/font_size = 26
-text = "Option Select"
-
-[node name="Button14" type="Button" parent="MarginContainer2/ScrollContainer/HBoxContainer/VBoxContainer" unique_id=637673482]
-layout_mode = 2
-theme_override_font_sizes/font_size = 26
-text = "Option Select"
-
-[node name="Button15" type="Button" parent="MarginContainer2/ScrollContainer/HBoxContainer/VBoxContainer" unique_id=565309553]
-layout_mode = 2
-theme_override_font_sizes/font_size = 26
-text = "Option Select"
-
-[node name="Button16" type="Button" parent="MarginContainer2/ScrollContainer/HBoxContainer/VBoxContainer" unique_id=1911128565]
-layout_mode = 2
-theme_override_font_sizes/font_size = 26
-text = "Option Select"
-
-[node name="Button17" type="Button" parent="MarginContainer2/ScrollContainer/HBoxContainer/VBoxContainer" unique_id=1304942419]
-layout_mode = 2
-theme_override_font_sizes/font_size = 26
-text = "Option Select"
-
-[node name="Button18" type="Button" parent="MarginContainer2/ScrollContainer/HBoxContainer/VBoxContainer" unique_id=207469909]
-layout_mode = 2
-theme_override_font_sizes/font_size = 26
-text = "Option Select"
-
-[node name="VBoxContainer2" type="VBoxContainer" parent="MarginContainer2/ScrollContainer/HBoxContainer" unique_id=145591772]
+[node name="HBoxContainer" type="HBoxContainer" parent="ScrollContainer/VBoxContainer/PanelContainer2" unique_id=5295650]
 layout_mode = 2
 
-[node name="Button" type="Button" parent="MarginContainer2/ScrollContainer/HBoxContainer/VBoxContainer2" unique_id=634531390]
+[node name="Button" type="Button" parent="ScrollContainer/VBoxContainer/PanelContainer2/HBoxContainer" unique_id=297589678]
+custom_minimum_size = Vector2(0, 50)
 layout_mode = 2
-theme_override_font_sizes/font_size = 26
-text = "Option Select"
+flat = true
 
-[node name="Button2" type="Button" parent="MarginContainer2/ScrollContainer/HBoxContainer/VBoxContainer2" unique_id=2097777277]
+[node name="PanelContainer3" type="PanelContainer" parent="ScrollContainer/VBoxContainer" unique_id=1226448906]
 layout_mode = 2
-theme_override_font_sizes/font_size = 26
-text = "Option Select"
 
-[node name="Button3" type="Button" parent="MarginContainer2/ScrollContainer/HBoxContainer/VBoxContainer2" unique_id=1608135718]
+[node name="HBoxContainer" type="HBoxContainer" parent="ScrollContainer/VBoxContainer/PanelContainer3" unique_id=198704861]
 layout_mode = 2
-theme_override_font_sizes/font_size = 26
-text = "Option Select"
 
-[node name="Button4" type="Button" parent="MarginContainer2/ScrollContainer/HBoxContainer/VBoxContainer2" unique_id=1631974679]
+[node name="Button" type="Button" parent="ScrollContainer/VBoxContainer/PanelContainer3/HBoxContainer" unique_id=182066537]
+custom_minimum_size = Vector2(0, 50)
 layout_mode = 2
-theme_override_font_sizes/font_size = 26
-text = "Option Select"
+flat = true
 
-[node name="Button5" type="Button" parent="MarginContainer2/ScrollContainer/HBoxContainer/VBoxContainer2" unique_id=409271516]
+[node name="PanelContainer4" type="PanelContainer" parent="ScrollContainer/VBoxContainer" unique_id=1688991837]
 layout_mode = 2
-theme_override_font_sizes/font_size = 26
-text = "Option Select"
 
-[node name="Button6" type="Button" parent="MarginContainer2/ScrollContainer/HBoxContainer/VBoxContainer2" unique_id=1667309152]
+[node name="HBoxContainer" type="HBoxContainer" parent="ScrollContainer/VBoxContainer/PanelContainer4" unique_id=132567128]
 layout_mode = 2
-theme_override_font_sizes/font_size = 26
-text = "Option Select"
 
-[node name="Button7" type="Button" parent="MarginContainer2/ScrollContainer/HBoxContainer/VBoxContainer2" unique_id=1756874815]
+[node name="Button" type="Button" parent="ScrollContainer/VBoxContainer/PanelContainer4/HBoxContainer" unique_id=1655948426]
+custom_minimum_size = Vector2(0, 50)
 layout_mode = 2
-theme_override_font_sizes/font_size = 26
-text = "Option Select"
+flat = true
 
-[node name="Button8" type="Button" parent="MarginContainer2/ScrollContainer/HBoxContainer/VBoxContainer2" unique_id=339685096]
+[node name="PanelContainer5" type="PanelContainer" parent="ScrollContainer/VBoxContainer" unique_id=188943279]
 layout_mode = 2
-theme_override_font_sizes/font_size = 26
-text = "Option Select"
 
-[node name="Button9" type="Button" parent="MarginContainer2/ScrollContainer/HBoxContainer/VBoxContainer2" unique_id=921374884]
+[node name="HBoxContainer" type="HBoxContainer" parent="ScrollContainer/VBoxContainer/PanelContainer5" unique_id=1806490314]
 layout_mode = 2
-theme_override_font_sizes/font_size = 26
-text = "Option Select"
 
-[node name="Button10" type="Button" parent="MarginContainer2/ScrollContainer/HBoxContainer/VBoxContainer2" unique_id=380134929]
+[node name="Button" type="Button" parent="ScrollContainer/VBoxContainer/PanelContainer5/HBoxContainer" unique_id=831635778]
+custom_minimum_size = Vector2(0, 50)
 layout_mode = 2
-theme_override_font_sizes/font_size = 26
-text = "Option Select"
+flat = true
 
-[node name="Button11" type="Button" parent="MarginContainer2/ScrollContainer/HBoxContainer/VBoxContainer2" unique_id=10535036]
+[node name="PanelContainer6" type="PanelContainer" parent="ScrollContainer/VBoxContainer" unique_id=966672072]
 layout_mode = 2
-theme_override_font_sizes/font_size = 26
-text = "Option Select"
 
-[node name="Button12" type="Button" parent="MarginContainer2/ScrollContainer/HBoxContainer/VBoxContainer2" unique_id=41460703]
+[node name="HBoxContainer" type="HBoxContainer" parent="ScrollContainer/VBoxContainer/PanelContainer6" unique_id=288172615]
 layout_mode = 2
-theme_override_font_sizes/font_size = 26
-text = "Option Select"
 
-[node name="Button13" type="Button" parent="MarginContainer2/ScrollContainer/HBoxContainer/VBoxContainer2" unique_id=742910579]
+[node name="Button" type="Button" parent="ScrollContainer/VBoxContainer/PanelContainer6/HBoxContainer" unique_id=1051393627]
+custom_minimum_size = Vector2(0, 50)
 layout_mode = 2
-theme_override_font_sizes/font_size = 26
-text = "Option Select"
+flat = true
 
-[node name="Button14" type="Button" parent="MarginContainer2/ScrollContainer/HBoxContainer/VBoxContainer2" unique_id=843165653]
+[node name="PanelContainer7" type="PanelContainer" parent="ScrollContainer/VBoxContainer" unique_id=120148167]
 layout_mode = 2
-theme_override_font_sizes/font_size = 26
-text = "Option Select"
 
-[node name="Button15" type="Button" parent="MarginContainer2/ScrollContainer/HBoxContainer/VBoxContainer2" unique_id=1617687618]
+[node name="HBoxContainer" type="HBoxContainer" parent="ScrollContainer/VBoxContainer/PanelContainer7" unique_id=1450519302]
 layout_mode = 2
-theme_override_font_sizes/font_size = 26
-text = "Option Select"
 
-[node name="Button16" type="Button" parent="MarginContainer2/ScrollContainer/HBoxContainer/VBoxContainer2" unique_id=1820695845]
+[node name="Button" type="Button" parent="ScrollContainer/VBoxContainer/PanelContainer7/HBoxContainer" unique_id=183989351]
+custom_minimum_size = Vector2(0, 50)
 layout_mode = 2
-theme_override_font_sizes/font_size = 26
-text = "Option Select"
+flat = true
 
-[node name="Button17" type="Button" parent="MarginContainer2/ScrollContainer/HBoxContainer/VBoxContainer2" unique_id=575980860]
+[node name="PanelContainer8" type="PanelContainer" parent="ScrollContainer/VBoxContainer" unique_id=1514873916]
 layout_mode = 2
-theme_override_font_sizes/font_size = 26
-text = "Option Select"
 
-[node name="Button18" type="Button" parent="MarginContainer2/ScrollContainer/HBoxContainer/VBoxContainer2" unique_id=413864141]
+[node name="HBoxContainer" type="HBoxContainer" parent="ScrollContainer/VBoxContainer/PanelContainer8" unique_id=513734189]
 layout_mode = 2
+<<<<<<< Updated upstream
 theme_override_font_sizes/font_size = 26
 text = "Option Select"
 
@@ -249,3 +203,65 @@ theme_override_font_sizes/font_size = 26
 text = "Exit"
 
 [connection signal="pressed" from="Exit_settings" to="." method="_on_exit_settings_pressed"]
+=======
+
+[node name="Button" type="Button" parent="ScrollContainer/VBoxContainer/PanelContainer8/HBoxContainer" unique_id=2066965060]
+custom_minimum_size = Vector2(0, 50)
+layout_mode = 2
+flat = true
+
+[node name="PanelContainer9" type="PanelContainer" parent="ScrollContainer/VBoxContainer" unique_id=1169390607]
+layout_mode = 2
+
+[node name="HBoxContainer" type="HBoxContainer" parent="ScrollContainer/VBoxContainer/PanelContainer9" unique_id=1119549657]
+layout_mode = 2
+
+[node name="Button" type="Button" parent="ScrollContainer/VBoxContainer/PanelContainer9/HBoxContainer" unique_id=1646338654]
+custom_minimum_size = Vector2(0, 50)
+layout_mode = 2
+flat = true
+
+[node name="PanelContainer10" type="PanelContainer" parent="ScrollContainer/VBoxContainer" unique_id=149441541]
+layout_mode = 2
+
+[node name="HBoxContainer" type="HBoxContainer" parent="ScrollContainer/VBoxContainer/PanelContainer10" unique_id=1951383362]
+layout_mode = 2
+
+[node name="Button" type="Button" parent="ScrollContainer/VBoxContainer/PanelContainer10/HBoxContainer" unique_id=1380818929]
+custom_minimum_size = Vector2(0, 50)
+layout_mode = 2
+flat = true
+
+[node name="PanelContainer11" type="PanelContainer" parent="ScrollContainer/VBoxContainer" unique_id=1710277791]
+layout_mode = 2
+
+[node name="HBoxContainer" type="HBoxContainer" parent="ScrollContainer/VBoxContainer/PanelContainer11" unique_id=1169233699]
+layout_mode = 2
+
+[node name="Button" type="Button" parent="ScrollContainer/VBoxContainer/PanelContainer11/HBoxContainer" unique_id=218568601]
+custom_minimum_size = Vector2(0, 50)
+layout_mode = 2
+flat = true
+
+[node name="PanelContainer12" type="PanelContainer" parent="ScrollContainer/VBoxContainer" unique_id=207771442]
+layout_mode = 2
+
+[node name="HBoxContainer" type="HBoxContainer" parent="ScrollContainer/VBoxContainer/PanelContainer12" unique_id=1618881505]
+layout_mode = 2
+
+[node name="Button" type="Button" parent="ScrollContainer/VBoxContainer/PanelContainer12/HBoxContainer" unique_id=615157284]
+custom_minimum_size = Vector2(0, 50)
+layout_mode = 2
+flat = true
+
+[node name="PanelContainer13" type="PanelContainer" parent="ScrollContainer/VBoxContainer" unique_id=780710634]
+layout_mode = 2
+
+[node name="HBoxContainer" type="HBoxContainer" parent="ScrollContainer/VBoxContainer/PanelContainer13" unique_id=1610386639]
+layout_mode = 2
+
+[node name="Button" type="Button" parent="ScrollContainer/VBoxContainer/PanelContainer13/HBoxContainer" unique_id=245912883]
+custom_minimum_size = Vector2(0, 50)
+layout_mode = 2
+flat = true
+>>>>>>> Stashed changes
