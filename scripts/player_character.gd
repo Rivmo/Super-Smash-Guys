@@ -4,7 +4,7 @@ extends CharacterBody2D
 @export var knockback = 0
 @export var extra_jumps = 1
 #time between punch attack in seconds
-@export var attack_delay = 2
+@export var attack_delay = 1
 
 signal Attack(pos, dir)
 

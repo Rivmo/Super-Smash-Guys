@@ -8,6 +8,7 @@ radius = 29.0
 height = 108.0
 
 [node name="Dummy" type="RigidBody2D" unique_id=1693198927]
+lock_rotation = true
 script = ExtResource("1_2hh5m")
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=2144059555]
