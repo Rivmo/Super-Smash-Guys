@@ -19,7 +19,6 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 color = Color(0.84977525, 0.56186223, 0.42118737, 1)
-metadata/*edit_lock* = true
 
 [node name="MarginContainer" type="MarginContainer" parent="." unique_id=427019897]
 layout_mode = 1
@@ -94,7 +93,6 @@ anchor_left = 0.25078124
 anchor_top = 0.18194444
 anchor_right = 0.74921876
 anchor_bottom = 0.95694447
-metadata/*edit_use_anchors* = true
 
 [node name="VBoxContainer" type="VBoxContainer" parent="ScrollContainer" unique_id=190285162]
 layout_mode = 2
@@ -243,3 +241,17 @@ layout_mode = 2
 custom_minimum_size = Vector2(0, 50)
 layout_mode = 2
 flat = true
+
+[node name="MarginContainer3" type="MarginContainer" parent="." unique_id=801293409]
+layout_mode = 0
+offset_right = 182.0
+offset_bottom = 63.0
+theme_override_constants/margin_left = 10
+theme_override_constants/margin_top = 10
+
+[node name="Exit" type="Button" parent="MarginContainer3" unique_id=1134614209]
+layout_mode = 2
+theme_override_font_sizes/font_size = 26
+text = "Exit"
+
+[connection signal="pressed" from="MarginContainer3/Exit" to="." method="_on_exit_pressed"]
