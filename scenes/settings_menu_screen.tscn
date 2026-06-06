@@ -1,9 +1,9 @@
 [gd_scene format=3 uid="uid://b7l4vewmcw08s"]
 
-[ext_resource type="Script" uid="uid://c0yhdwe7dab23" path="res://scripts/settings_menu_screen.gd" id="1_cie3p"]
-[ext_resource type="Script" uid="uid://ct7dkt6vlfj3i" path="res://scripts/fullscreen_option.gd" id="2_4emew"]
-[ext_resource type="Script" uid="uid://xmmfh26in42w" path="res://scripts/language_option.gd" id="3_o38cp"]
-[ext_resource type="Script" uid="uid://hfjsg6iwmqb0" path="res://scripts/fps_option.gd" id="4_mjea3"]
+[ext_resource type="Script" uid="uid://c0yhdwe7dab23" path="res://scripts/settings/settings_menu_screen.gd" id="1_cie3p"]
+[ext_resource type="Script" uid="uid://ct7dkt6vlfj3i" path="res://scripts/settings/fullscreen_option.gd" id="2_4emew"]
+[ext_resource type="Script" uid="uid://xmmfh26in42w" path="res://scripts/settings/language_option.gd" id="3_o38cp"]
+[ext_resource type="Script" uid="uid://hfjsg6iwmqb0" path="res://scripts/settings/fps_option.gd" id="4_mjea3"]
 
 [node name="Settings Menu" type="Control" unique_id=251010454]
 layout_mode = 3

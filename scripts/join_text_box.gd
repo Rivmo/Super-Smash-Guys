@@ -13,8 +13,6 @@ func _on_host_pressed() -> void:
 
 func _on_text_submitted(text: String) -> void:
 	var code := NetworkManager.Server_Port
-	print(text)
-	print(code)
 	if int(text) == code:
 		NetworkManager.lobby_join()
 		NetworkManager.create_client()

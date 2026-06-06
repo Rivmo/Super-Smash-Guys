@@ -4,8 +4,8 @@
 [ext_resource type="PackedScene" uid="uid://b0x3345qebl54" path="res://scenes/player_character.tscn" id="1_hunim"]
 [ext_resource type="PackedScene" uid="uid://cff2uoaxsga1o" path="res://scenes/Dummy.tscn" id="3_kadwe"]
 [ext_resource type="Texture2D" uid="uid://bvsp47waemsrw" path="res://images/svg_icon_3_bars.png" id="4_4khq4"]
-[ext_resource type="Script" uid="uid://d3qmgjgut56a" path="res://scripts/exit_menu.gd" id="4_tqfwa"]
-[ext_resource type="Script" uid="uid://dcjvoi2lcdapc" path="res://scripts/exit_menu_2.gd" id="5_dvwu8"]
+[ext_resource type="Script" uid="uid://d3qmgjgut56a" path="res://scripts/Exits/exit_menu.gd" id="4_tqfwa"]
+[ext_resource type="Script" uid="uid://dcjvoi2lcdapc" path="res://scripts/Exits/exit_menu_2.gd" id="5_dvwu8"]
 
 [sub_resource type="QuadMesh" id="QuadMesh_hunim"]
 

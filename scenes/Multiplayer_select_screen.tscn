@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://cn6srbhlwesby"]
 
-[ext_resource type="Script" uid="uid://dai77jnd2dck6" path="res://scripts/multiplayer_select_screen.gd" id="1_8g5g0"]
+[ext_resource type="Script" uid="uid://dai77jnd2dck6" path="res://scripts/Multiplayer/multiplayer_select_screen.gd" id="1_8g5g0"]
 [ext_resource type="Script" uid="uid://o6coobbymf2x" path="res://scripts/join_text_box.gd" id="2_8g5g0"]
 
 [node name="Multiplayer Menu" type="Control" unique_id=1049558189]
