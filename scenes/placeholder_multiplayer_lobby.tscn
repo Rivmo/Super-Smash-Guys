@@ -1,0 +1,200 @@
+[gd_scene format=3 uid="uid://dg6shi8eros0k"]
+
+[ext_resource type="Script" uid="uid://d2mp7uyq8ejy2" path="res://scripts/exit_multiplayer.gd" id="1_bwbv6"]
+
+[node name="Control" type="Control" unique_id=1290787588]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=205190431]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.84977525, 0.56186223, 0.42118737, 1)
+
+[node name="MarginContainer" type="MarginContainer" parent="." unique_id=1707322820]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.16626158
+offset_left = -312.5
+offset_right = 312.5
+grow_horizontal = 2
+theme_override_constants/margin_top = 22
+metadata/_edit_use_anchors_ = true
+
+[node name="Title" type="Label" parent="MarginContainer" unique_id=1824115336]
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_font_sizes/font_size = 70
+text = "Multiplayer"
+
+[node name="HBoxContainer" type="HBoxContainer" parent="." unique_id=1652497049]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.5
+anchor_top = 0.595
+anchor_right = 0.5
+anchor_bottom = 0.595
+offset_left = -481.0
+offset_top = -102.400024
+offset_right = 481.0
+offset_bottom = 102.599976
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="PlayerInfoPanel1" type="PanelContainer" parent="HBoxContainer" unique_id=391667393]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="MarginContainer" type="MarginContainer" parent="HBoxContainer/PlayerInfoPanel1" unique_id=636127801]
+layout_mode = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="HBoxContainer/PlayerInfoPanel1/MarginContainer" unique_id=367835124]
+layout_mode = 2
+
+[node name="textbox1" type="Label" parent="HBoxContainer/PlayerInfoPanel1/MarginContainer/VBoxContainer" unique_id=223998480]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 6
+text = "Textbox 1"
+
+[node name="textbox2" type="Label" parent="HBoxContainer/PlayerInfoPanel1/MarginContainer/VBoxContainer" unique_id=556534697]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 6
+text = "Textbox 1"
+
+[node name="textbox3" type="Label" parent="HBoxContainer/PlayerInfoPanel1/MarginContainer/VBoxContainer" unique_id=1559966108]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 6
+text = "Textbox 1"
+
+[node name="textbox4" type="Label" parent="HBoxContainer/PlayerInfoPanel1/MarginContainer/VBoxContainer" unique_id=1653245800]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 6
+text = "Textbox 1"
+
+[node name="PlayerInfoPanel2" type="PanelContainer" parent="HBoxContainer" unique_id=376585654]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="MarginContainer" type="MarginContainer" parent="HBoxContainer/PlayerInfoPanel2" unique_id=1003229705]
+layout_mode = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="HBoxContainer/PlayerInfoPanel2/MarginContainer" unique_id=1988649438]
+layout_mode = 2
+
+[node name="textbox1" type="Label" parent="HBoxContainer/PlayerInfoPanel2/MarginContainer/VBoxContainer" unique_id=1587990234]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 6
+text = "Textbox 1"
+
+[node name="textbox2" type="Label" parent="HBoxContainer/PlayerInfoPanel2/MarginContainer/VBoxContainer" unique_id=1972748727]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 6
+text = "Textbox 1"
+
+[node name="textbox3" type="Label" parent="HBoxContainer/PlayerInfoPanel2/MarginContainer/VBoxContainer" unique_id=58939354]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 6
+text = "Textbox 1"
+
+[node name="textbox4" type="Label" parent="HBoxContainer/PlayerInfoPanel2/MarginContainer/VBoxContainer" unique_id=807627514]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 6
+text = "Textbox 1"
+
+[node name="PlayerInfoPanel3" type="PanelContainer" parent="HBoxContainer" unique_id=1372310779]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="MarginContainer" type="MarginContainer" parent="HBoxContainer/PlayerInfoPanel3" unique_id=835402697]
+layout_mode = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="HBoxContainer/PlayerInfoPanel3/MarginContainer" unique_id=1024247848]
+layout_mode = 2
+
+[node name="textbox1" type="Label" parent="HBoxContainer/PlayerInfoPanel3/MarginContainer/VBoxContainer" unique_id=1113754732]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 6
+text = "Textbox 1"
+
+[node name="textbox2" type="Label" parent="HBoxContainer/PlayerInfoPanel3/MarginContainer/VBoxContainer" unique_id=1455034762]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 6
+text = "Textbox 1"
+
+[node name="textbox3" type="Label" parent="HBoxContainer/PlayerInfoPanel3/MarginContainer/VBoxContainer" unique_id=409197902]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 6
+text = "Textbox 1"
+
+[node name="textbox4" type="Label" parent="HBoxContainer/PlayerInfoPanel3/MarginContainer/VBoxContainer" unique_id=982619915]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 6
+text = "Textbox 1"
+
+[node name="PlayerInfoPanel4" type="PanelContainer" parent="HBoxContainer" unique_id=1946399449]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="MarginContainer" type="MarginContainer" parent="HBoxContainer/PlayerInfoPanel4" unique_id=407026353]
+layout_mode = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="HBoxContainer/PlayerInfoPanel4/MarginContainer" unique_id=1606226048]
+layout_mode = 2
+
+[node name="textbox1" type="Label" parent="HBoxContainer/PlayerInfoPanel4/MarginContainer/VBoxContainer" unique_id=346177963]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 6
+text = "Textbox 1"
+
+[node name="textbox2" type="Label" parent="HBoxContainer/PlayerInfoPanel4/MarginContainer/VBoxContainer" unique_id=1773866486]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 6
+text = "Textbox 1"
+
+[node name="textbox3" type="Label" parent="HBoxContainer/PlayerInfoPanel4/MarginContainer/VBoxContainer" unique_id=318553497]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 6
+text = "Textbox 1"
+
+[node name="textbox4" type="Label" parent="HBoxContainer/PlayerInfoPanel4/MarginContainer/VBoxContainer" unique_id=873196643]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 6
+text = "Textbox 1"
+
+[node name="Exit_Multiplayer" type="Button" parent="." unique_id=1538128373]
+layout_mode = 0
+offset_left = 12.8
+offset_top = 6.4
+offset_right = 192.8
+offset_bottom = 55.4
+theme_override_font_sizes/font_size = 26
+text = "Exit"
+script = ExtResource("1_bwbv6")
+
+[connection signal="pressed" from="Exit_Multiplayer" to="Exit_Multiplayer" method="_on_pressed"]

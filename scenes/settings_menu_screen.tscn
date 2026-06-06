@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://b7l4vewmcw08s"]
 
 [ext_resource type="Script" uid="uid://c0yhdwe7dab23" path="res://scripts/settings_menu_screen.gd" id="1_cie3p"]
+[ext_resource type="Script" uid="uid://ct7dkt6vlfj3i" path="res://scripts/button_switch.gd" id="2_4emew"]
 
 [node name="Settings Menu" type="Control" unique_id=251010454]
 layout_mode = 3
@@ -53,35 +54,35 @@ layout_mode = 2
 size_flags_horizontal = 4
 size_flags_vertical = 4
 
-[node name="Button" type="Button" parent="MarginContainer2/VBoxContainer" unique_id=1064166925]
+[node name="General" type="Button" parent="MarginContainer2/VBoxContainer" unique_id=1064166925]
 layout_mode = 2
-size_flags_horizontal = 8
+size_flags_horizontal = 0
 theme_override_font_sizes/font_size = 45
 text = "General"
 
-[node name="Button2" type="Button" parent="MarginContainer2/VBoxContainer" unique_id=249233468]
+[node name="Video" type="Button" parent="MarginContainer2/VBoxContainer" unique_id=249233468]
 layout_mode = 2
-size_flags_horizontal = 8
+size_flags_horizontal = 0
 theme_override_font_sizes/font_size = 45
-text = "General"
+text = "Video"
 
-[node name="Button3" type="Button" parent="MarginContainer2/VBoxContainer" unique_id=1556858039]
+[node name="Audio" type="Button" parent="MarginContainer2/VBoxContainer" unique_id=1556858039]
 layout_mode = 2
-size_flags_horizontal = 8
+size_flags_horizontal = 0
 theme_override_font_sizes/font_size = 45
-text = "General"
+text = "Audio"
 
-[node name="Button4" type="Button" parent="MarginContainer2/VBoxContainer" unique_id=1533968758]
+[node name="Controls" type="Button" parent="MarginContainer2/VBoxContainer" unique_id=1533968758]
 layout_mode = 2
-size_flags_horizontal = 8
+size_flags_horizontal = 0
 theme_override_font_sizes/font_size = 45
-text = "General"
+text = "Controls"
 
-[node name="Button5" type="Button" parent="MarginContainer2/VBoxContainer" unique_id=1556690114]
+[node name="Music" type="Button" parent="MarginContainer2/VBoxContainer" unique_id=1556690114]
 layout_mode = 2
-size_flags_horizontal = 8
+size_flags_horizontal = 0
 theme_override_font_sizes/font_size = 45
-text = "General"
+text = "Music"
 
 [node name="ScrollContainer" type="ScrollContainer" parent="." unique_id=2077631856]
 layout_mode = 1
@@ -96,148 +97,31 @@ layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
 
-[node name="PanelContainer" type="PanelContainer" parent="ScrollContainer/VBoxContainer" unique_id=1571563871]
+[node name="ButtonSwitch" type="PanelContainer" parent="ScrollContainer/VBoxContainer" unique_id=1571563871]
+custom_minimum_size = Vector2(0, 45)
 layout_mode = 2
+script = ExtResource("2_4emew")
 
-[node name="HBoxContainer" type="HBoxContainer" parent="ScrollContainer/VBoxContainer/PanelContainer" unique_id=1113970822]
+[node name="MarginContainer" type="MarginContainer" parent="ScrollContainer/VBoxContainer/ButtonSwitch" unique_id=2064126163]
 layout_mode = 2
+theme_override_constants/margin_left = 10
 
-[node name="Button" type="Button" parent="ScrollContainer/VBoxContainer/PanelContainer/HBoxContainer" unique_id=1113597925]
-custom_minimum_size = Vector2(0, 50)
+[node name="SettingsLabel" type="Label" parent="ScrollContainer/VBoxContainer/ButtonSwitch/MarginContainer" unique_id=287511789]
 layout_mode = 2
-flat = true
+size_flags_horizontal = 2
+text = "sigma"
 
-[node name="PanelContainer2" type="PanelContainer" parent="ScrollContainer/VBoxContainer" unique_id=79741179]
+[node name="MarginContainer2" type="MarginContainer" parent="ScrollContainer/VBoxContainer/ButtonSwitch" unique_id=1055315174]
 layout_mode = 2
+theme_override_constants/margin_top = 5
+theme_override_constants/margin_right = 10
+theme_override_constants/margin_bottom = 5
 
-[node name="HBoxContainer" type="HBoxContainer" parent="ScrollContainer/VBoxContainer/PanelContainer2" unique_id=5295650]
+[node name="SettingsButton" type="Button" parent="ScrollContainer/VBoxContainer/ButtonSwitch/MarginContainer2" unique_id=1914365548]
+custom_minimum_size = Vector2(100, 0)
 layout_mode = 2
-
-[node name="Button" type="Button" parent="ScrollContainer/VBoxContainer/PanelContainer2/HBoxContainer" unique_id=297589678]
-custom_minimum_size = Vector2(0, 50)
-layout_mode = 2
-flat = true
-
-[node name="PanelContainer3" type="PanelContainer" parent="ScrollContainer/VBoxContainer" unique_id=1226448906]
-layout_mode = 2
-
-[node name="HBoxContainer" type="HBoxContainer" parent="ScrollContainer/VBoxContainer/PanelContainer3" unique_id=198704861]
-layout_mode = 2
-
-[node name="Button" type="Button" parent="ScrollContainer/VBoxContainer/PanelContainer3/HBoxContainer" unique_id=182066537]
-custom_minimum_size = Vector2(0, 50)
-layout_mode = 2
-flat = true
-
-[node name="PanelContainer4" type="PanelContainer" parent="ScrollContainer/VBoxContainer" unique_id=1688991837]
-layout_mode = 2
-
-[node name="HBoxContainer" type="HBoxContainer" parent="ScrollContainer/VBoxContainer/PanelContainer4" unique_id=132567128]
-layout_mode = 2
-
-[node name="Button" type="Button" parent="ScrollContainer/VBoxContainer/PanelContainer4/HBoxContainer" unique_id=1655948426]
-custom_minimum_size = Vector2(0, 50)
-layout_mode = 2
-flat = true
-
-[node name="PanelContainer5" type="PanelContainer" parent="ScrollContainer/VBoxContainer" unique_id=188943279]
-layout_mode = 2
-
-[node name="HBoxContainer" type="HBoxContainer" parent="ScrollContainer/VBoxContainer/PanelContainer5" unique_id=1806490314]
-layout_mode = 2
-
-[node name="Button" type="Button" parent="ScrollContainer/VBoxContainer/PanelContainer5/HBoxContainer" unique_id=831635778]
-custom_minimum_size = Vector2(0, 50)
-layout_mode = 2
-flat = true
-
-[node name="PanelContainer6" type="PanelContainer" parent="ScrollContainer/VBoxContainer" unique_id=966672072]
-layout_mode = 2
-
-[node name="HBoxContainer" type="HBoxContainer" parent="ScrollContainer/VBoxContainer/PanelContainer6" unique_id=288172615]
-layout_mode = 2
-
-[node name="Button" type="Button" parent="ScrollContainer/VBoxContainer/PanelContainer6/HBoxContainer" unique_id=1051393627]
-custom_minimum_size = Vector2(0, 50)
-layout_mode = 2
-flat = true
-
-[node name="PanelContainer7" type="PanelContainer" parent="ScrollContainer/VBoxContainer" unique_id=120148167]
-layout_mode = 2
-
-[node name="HBoxContainer" type="HBoxContainer" parent="ScrollContainer/VBoxContainer/PanelContainer7" unique_id=1450519302]
-layout_mode = 2
-
-[node name="Button" type="Button" parent="ScrollContainer/VBoxContainer/PanelContainer7/HBoxContainer" unique_id=183989351]
-custom_minimum_size = Vector2(0, 50)
-layout_mode = 2
-flat = true
-
-[node name="PanelContainer8" type="PanelContainer" parent="ScrollContainer/VBoxContainer" unique_id=1514873916]
-layout_mode = 2
-
-[node name="HBoxContainer" type="HBoxContainer" parent="ScrollContainer/VBoxContainer/PanelContainer8" unique_id=513734189]
-layout_mode = 2
-
-[node name="Button" type="Button" parent="ScrollContainer/VBoxContainer/PanelContainer8/HBoxContainer" unique_id=2066965060]
-custom_minimum_size = Vector2(0, 50)
-layout_mode = 2
-flat = true
-
-[node name="PanelContainer9" type="PanelContainer" parent="ScrollContainer/VBoxContainer" unique_id=1169390607]
-layout_mode = 2
-
-[node name="HBoxContainer" type="HBoxContainer" parent="ScrollContainer/VBoxContainer/PanelContainer9" unique_id=1119549657]
-layout_mode = 2
-
-[node name="Button" type="Button" parent="ScrollContainer/VBoxContainer/PanelContainer9/HBoxContainer" unique_id=1646338654]
-custom_minimum_size = Vector2(0, 50)
-layout_mode = 2
-flat = true
-
-[node name="PanelContainer10" type="PanelContainer" parent="ScrollContainer/VBoxContainer" unique_id=149441541]
-layout_mode = 2
-
-[node name="HBoxContainer" type="HBoxContainer" parent="ScrollContainer/VBoxContainer/PanelContainer10" unique_id=1951383362]
-layout_mode = 2
-
-[node name="Button" type="Button" parent="ScrollContainer/VBoxContainer/PanelContainer10/HBoxContainer" unique_id=1380818929]
-custom_minimum_size = Vector2(0, 50)
-layout_mode = 2
-flat = true
-
-[node name="PanelContainer11" type="PanelContainer" parent="ScrollContainer/VBoxContainer" unique_id=1710277791]
-layout_mode = 2
-
-[node name="HBoxContainer" type="HBoxContainer" parent="ScrollContainer/VBoxContainer/PanelContainer11" unique_id=1169233699]
-layout_mode = 2
-
-[node name="Button" type="Button" parent="ScrollContainer/VBoxContainer/PanelContainer11/HBoxContainer" unique_id=218568601]
-custom_minimum_size = Vector2(0, 50)
-layout_mode = 2
-flat = true
-
-[node name="PanelContainer12" type="PanelContainer" parent="ScrollContainer/VBoxContainer" unique_id=207771442]
-layout_mode = 2
-
-[node name="HBoxContainer" type="HBoxContainer" parent="ScrollContainer/VBoxContainer/PanelContainer12" unique_id=1618881505]
-layout_mode = 2
-
-[node name="Button" type="Button" parent="ScrollContainer/VBoxContainer/PanelContainer12/HBoxContainer" unique_id=615157284]
-custom_minimum_size = Vector2(0, 50)
-layout_mode = 2
-flat = true
-
-[node name="PanelContainer13" type="PanelContainer" parent="ScrollContainer/VBoxContainer" unique_id=780710634]
-layout_mode = 2
-
-[node name="HBoxContainer" type="HBoxContainer" parent="ScrollContainer/VBoxContainer/PanelContainer13" unique_id=1610386639]
-layout_mode = 2
-
-[node name="Button" type="Button" parent="ScrollContainer/VBoxContainer/PanelContainer13/HBoxContainer" unique_id=245912883]
-custom_minimum_size = Vector2(0, 50)
-layout_mode = 2
-flat = true
+size_flags_horizontal = 8
+text = "On"
 
 [node name="MarginContainer3" type="MarginContainer" parent="." unique_id=801293409]
 layout_mode = 0
