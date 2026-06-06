@@ -1,7 +1,14 @@
 [gd_scene format=3 uid="uid://dg6shi8eros0k"]
 
-[ext_resource type="Script" uid="uid://m37r4ppotmrm" path="res://scenes/placeholder_multiplayer_lobby.gd" id="1_qojf2"]
 [ext_resource type="Script" uid="uid://c2sua0rlp6uru" path="res://scripts/code_box.gd" id="2_qojf2"]
+
+[sub_resource type="GDScript" id="GDScript_bwbv6"]
+script/source = "extends Control
+
+func _on_exit_multiplayer_pressed() -> void:
+	NetworkManager.leave_game_load_menu()
+ 
+"
 
 [node name="Control" type="Control" unique_id=1290787588]
 layout_mode = 3
@@ -10,7 +17,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-script = ExtResource("1_qojf2")
+script = SubResource("GDScript_bwbv6")
 
 [node name="ColorRect" type="ColorRect" parent="." unique_id=205190431]
 layout_mode = 1

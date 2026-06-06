@@ -4,14 +4,17 @@ extends Node
 # "get_tree().get_multiplayer()." is the same as "multiplayer."
 var Server_Port : int = 1111
 
+var is_host = false
 
 func create_server():
+	is_host = true
 	var enet_network_peer: ENetMultiplayerPeer = ENetMultiplayerPeer.new()
 	enet_network_peer.create_server(Server_Port)
 	get_tree().get_multiplayer().multiplayer_peer = enet_network_peer
 	print("made server")
 	
 func create_client(hosts_IP: String = "localhost", host_Port: int = Server_Port):
+	is_host = false
 	_setup_client_connection_signals()
 	var enet_network_peer: ENetMultiplayerPeer = ENetMultiplayerPeer.new()
 	enet_network_peer.create_client(hosts_IP, host_Port)
