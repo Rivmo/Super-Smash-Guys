@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://dg6shi8eros0k"]
 
-[ext_resource type="Script" uid="uid://d2mp7uyq8ejy2" path="res://scripts/exit_multiplayer.gd" id="1_bwbv6"]
+[ext_resource type="Script" uid="uid://m37r4ppotmrm" path="res://scenes/placeholder_multiplayer_lobby.gd" id="1_qojf2"]
+[ext_resource type="Script" uid="uid://c2sua0rlp6uru" path="res://scripts/code_box.gd" id="2_qojf2"]
 
 [node name="Control" type="Control" unique_id=1290787588]
 layout_mode = 3
@@ -9,6 +10,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+script = ExtResource("1_qojf2")
 
 [node name="ColorRect" type="ColorRect" parent="." unique_id=205190431]
 layout_mode = 1
@@ -147,6 +149,16 @@ offset_right = 192.8
 offset_bottom = 55.4
 theme_override_font_sizes/font_size = 26
 text = "Exit"
-script = ExtResource("1_bwbv6")
 
-[connection signal="pressed" from="Exit_Multiplayer" to="Exit_Multiplayer" method="_on_pressed"]
+[node name="code_box" type="Label" parent="." unique_id=1767906684]
+layout_mode = 0
+offset_left = 451.0
+offset_top = 532.0
+offset_right = 794.0
+offset_bottom = 687.0
+theme_override_font_sizes/font_size = 100
+horizontal_alignment = 1
+vertical_alignment = 1
+script = ExtResource("2_qojf2")
+
+[connection signal="pressed" from="Exit_Multiplayer" to="." method="_on_exit_multiplayer_pressed"]

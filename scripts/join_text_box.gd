@@ -3,16 +3,21 @@ extends LineEdit
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	visible = false
-
+	
 func _on_join_pressed() -> void:
 	visible = true
-	NetworkManager.create_client()
 	
 func _on_host_pressed() -> void:
 	NetworkManager.create_server()
-	
+	NetworkManager.lobby_join()
+
 func _on_text_submitted(text: String) -> void:
+	var code := NetworkManager.Server_Port
 	print(text)
+	print(code)
+	if int(text) == code:
+		NetworkManager.lobby_join()
+		NetworkManager.create_client()
 	
 func _on_button_pressed() -> void:
 	_send_test_message.rpc("hi")
