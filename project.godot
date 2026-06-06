@@ -17,6 +17,7 @@ config/features=PackedStringArray("4.6", "Forward Plus")
 [autoload]
 
 NetworkManager="*uid://b6f4t8yd1hlen"
+PlayerOptions="*uid://dgb1gh4bmdtwc"
 
 [display]
 
