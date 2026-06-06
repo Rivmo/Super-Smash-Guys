@@ -23,6 +23,9 @@ func _process(delta: float) -> void:
 		self.free()
 
 func _on_area_2d_body_entered(body: Node2D) -> void:
+	#handle hitting the dummy with attack
 	if body.name == "Dummy":
 		print("hit dummy")
-		body.apply_impulse(Vector2(dir*400,10))
+		body.knockback += 10
+		var knockback = body.knockback * 4
+		body.apply_impulse(Vector2(dir*(400+knockback),10))
