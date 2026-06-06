@@ -7,6 +7,8 @@
 radius = 29.0
 height = 108.0
 
+[sub_resource type="QuadMesh" id="QuadMesh_2hh5m"]
+
 [node name="Dummy" type="RigidBody2D" unique_id=1693198927]
 lock_rotation = true
 script = ExtResource("1_2hh5m")
@@ -18,3 +20,15 @@ texture = ExtResource("1_0j1vb")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=444496420]
 shape = SubResource("CapsuleShape2D_2hh5m")
+
+[node name="Red" type="MeshInstance2D" parent="." unique_id=1449269532]
+modulate = Color(1, 0, 0, 1)
+position = Vector2(0, -75)
+scale = Vector2(100, 10)
+mesh = SubResource("QuadMesh_2hh5m")
+
+[node name="Green" type="MeshInstance2D" parent="." unique_id=1766819062]
+modulate = Color(0, 1, 0, 1)
+position = Vector2(0, -75)
+scale = Vector2(100, 10)
+mesh = SubResource("QuadMesh_2hh5m")
