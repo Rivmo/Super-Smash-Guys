@@ -93,16 +93,7 @@ offset_bottom = 55.4
 theme_override_font_sizes/font_size = 26
 text = "Exit"
 
-[node name="Button" type="Button" parent="." unique_id=282592388]
-layout_mode = 0
-offset_left = 980.0
-offset_top = 53.0
-offset_right = 1221.0
-offset_bottom = 203.0
-text = "button"
-
 [connection signal="pressed" from="VBoxContainer/Host" to="join_text_box" method="_on_host_pressed"]
 [connection signal="pressed" from="VBoxContainer/Join" to="join_text_box" method="_on_join_pressed"]
 [connection signal="text_submitted" from="join_text_box" to="join_text_box" method="_on_text_submitted"]
 [connection signal="pressed" from="Exit_Multiplayer" to="." method="_on_exit_multiplayer_pressed"]
-[connection signal="pressed" from="Button" to="join_text_box" method="_on_button_pressed"]

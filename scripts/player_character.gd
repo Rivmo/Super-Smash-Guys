@@ -10,7 +10,8 @@ extends CharacterBody2D
 @export var velocityxk = 0
 @export var velocityyk = 0
 @export var stuntime = 0
-
+#extra stats
+@export var blocking = 0
 
 signal Attack(pos, dir)
 
@@ -54,7 +55,7 @@ func _process(delta: float) -> void:
 		is_dashing = false
 		
 	if stuntime > 0:
-		stuntime -= 1 * delta
+		stuntime -= delta
 		velocityxk -= velocityxk/stuntime * delta
 		velocityyk -= velocityyk/stuntime * delta
 	else:
@@ -93,7 +94,7 @@ func _physics_process(delta: float) -> void:
 			dash_direction = Facing
 			velocity.x += direction * dash_speed
 		if is_dashing:
-				velocity.x =   SPEED * dash_speed * dash_direction
+				velocity.x =   SPEED * dash_speed * dash_direction 
 		if direction:
 			if not is_dashing:
 				velocity.x = direction * SPEED
@@ -113,7 +114,7 @@ func _physics_process(delta: float) -> void:
 			position.y += 51
 		if Input.is_action_just_released("Crouch"):
 			scale.y = 1
-	velocity.x += velocityxk
-	velocity.y += velocityyk
+	velocity.x += velocityxk*delta
+	velocity.y += velocityyk  *delta
 		
 	move_and_slide()
