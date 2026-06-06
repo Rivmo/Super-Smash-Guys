@@ -1,4 +1,4 @@
-extends VBoxContainer
+extends Control
 
 # ADDING MORE MAPS (instructions)
 # add one more 0 to the MapVotes variable
@@ -11,14 +11,17 @@ var MapLastVoted := 0
 var MapVoted := 0
 var IsMapChosen := false
 const PlaceholderArena = preload("res://scenes/placeholder_arena.tscn")
-@onready var VoteTimerLabel = $"../MarginContainer/Panel/Label"
-@onready var MapVoteTimer = $"../MapVoteTimer"
+@onready var VoteTimerLabel = $ColorRect/MarginContainer/Panel/Label
+@onready var MapVoteTimer = $ColorRect/MapVoteTimer
 func _process(delta: float) -> void:
-	$HBoxContainer2/Label.text = str(MapVotes[1])
-	$HBoxContainer2/Label2.text = str(MapVotes[2])
-	$HBoxContainer2/Label3.text = str(MapVotes[3])
-	$HBoxContainer2/Label4.text = str(MapVotes[4])
-	VoteTimerLabel.text = str(MapVoteTimer.time_left).substr(0,4)
+	$ColorRect/VBoxContainer/HBoxContainer2/Label.text = str(MapVotes[1])
+	$ColorRect/VBoxContainer/HBoxContainer2/Label2.text = str(MapVotes[2])
+	$ColorRect/VBoxContainer/HBoxContainer2/Label3.text = str(MapVotes[3])
+	$ColorRect/VBoxContainer/HBoxContainer2/Label4.text = str(MapVotes[4])
+	if MapVoteTimer.time_left >= 10:
+		VoteTimerLabel.text = (str(MapVoteTimer.time_left).substr(0,4)+"s")
+	else:
+		VoteTimerLabel.text = (str(MapVoteTimer.time_left).substr(0,3)+"s")
 	if MapVoteTimer.time_left == 0.0 and IsMapChosen == false:
 		loadmap()
 
@@ -40,13 +43,19 @@ func loadmap() -> void:
 	if selectedmap == 1:
 		print("Loading map 1")
 		get_tree().current_scene.add_child(PlaceholderArena.instantiate())
-		$"..".visible = false
+		$ColorRect.visible = false
 	elif selectedmap == 2:
 		print("Loading map 2")
+		
+		$ColorRect.visible = false
 	elif selectedmap == 3:
 		print("Loading map 3")
+		
+		$ColorRect.visible = false
 	elif selectedmap == 4:
 		print("Loading map 4")
+		
+		$ColorRect.visible = false
 	else:
 		print("Error, Map not found, please contact River")
 
