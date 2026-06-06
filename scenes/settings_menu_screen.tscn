@@ -303,5 +303,5 @@ text = "button.exit"
 [connection signal="pressed" from="ScrollContainer/VBoxContainer/On_Off Setting/MarginContainer2/SettingsButton" to="ScrollContainer/VBoxContainer/On_Off Setting/MarginContainer2/SettingsButton" method="_on_pressed"]
 [connection signal="pressed" from="ScrollContainer/VBoxContainer/On_Off Setting2/MarginContainer2/SettingsButton" to="ScrollContainer/VBoxContainer/On_Off Setting2/MarginContainer2/SettingsButton" method="_on_pressed"]
 [connection signal="item_selected" from="ScrollContainer/VBoxContainer/Drop_Down Setting/MarginContainer2/OptionButton" to="ScrollContainer/VBoxContainer/Drop_Down Setting/MarginContainer2/OptionButton" method="_on_item_selected"]
-[connection signal="changed" from="ScrollContainer/VBoxContainer/Spinbox Setting/MarginContainer2/SpinBox" to="ScrollContainer/VBoxContainer/Spinbox Setting/MarginContainer2/SpinBox" method="_on_changed"]
+[connection signal="value_changed" from="ScrollContainer/VBoxContainer/Spinbox Setting/MarginContainer2/SpinBox" to="ScrollContainer/VBoxContainer/Spinbox Setting/MarginContainer2/SpinBox" method="_on_value_changed"]
 [connection signal="pressed" from="MarginContainer3/Exit" to="." method="_on_exit_pressed"]
