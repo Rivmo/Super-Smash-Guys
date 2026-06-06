@@ -28,6 +28,8 @@ func _ready() -> void:
 	position = Vector2(240,450)
 	
 func _process(delta: float) -> void:
+	#process cooldowns
+	
 	if attack_available != true:
 		attack_delay_absolute_time += 1 * delta
 	if attack_delay_absolute_time >= attack_delay:
@@ -63,8 +65,7 @@ func _physics_process(delta: float) -> void:
 			velocity.y = JUMP_VELOCITY
 			Double_jump_count += 1
 	
-	# Get the input direction and handle the movement/deceleration.
-	# As good practice, you should replace UI actions with custom gameplay actions.
+	#Handle dashing inputs & input direction and handle the movement/deceleration.
 	var direction := Input.get_axis("Left", "Right")
 	if Input.is_action_just_pressed("Dash") and dash_available:
 		dash_available = false
@@ -81,13 +82,15 @@ func _physics_process(delta: float) -> void:
 	else:
 		velocity.x = move_toward(velocity.x, 0, SPEED)
 	
+	#emit attack signal on attack input
 	if Input.is_action_just_pressed("Attack") and attack_available == true:
 		Attack.emit(Facing)
 		attack_available = false
+		
+	#Handle crouch inputs	
 	if Input.is_action_just_pressed("Crouch"):
 		scale.y = 0.5
 		position.y += 51
-	
 	if Input.is_action_just_released("Crouch"):
 		scale.y = 1
 
