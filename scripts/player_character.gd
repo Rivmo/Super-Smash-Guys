@@ -6,6 +6,11 @@ extends CharacterBody2D
 #time between punch attack in seconds
 @export var attack_delay = 1
 @export var dash_delay = 1
+#knockback velocities
+@export var velocityxk = 0
+@export var velocityyk = 0
+@export var stuntime = 0
+
 
 signal Attack(pos, dir)
 
@@ -47,6 +52,20 @@ func _process(delta: float) -> void:
 	if dashing_delay_absolute_time >= 0.25:
 		dashing_delay_absolute_time = 0
 		is_dashing = false
+		
+	if stuntime > 0:
+		stuntime -= 1 * delta
+		velocityxk -= velocityxk/stuntime * delta
+		velocityyk -= velocityyk/stuntime * delta
+	else:
+		stuntime = 0
+		velocityxk = 0
+		velocityyk = 0
+	
+	#process healthbar
+	var green = $Green
+	green.scale.x = 100 - knockback/3 
+	green.position.x = -knockback/6 - 1
 	
 
 func _physics_process(delta: float) -> void:
@@ -66,33 +85,35 @@ func _physics_process(delta: float) -> void:
 			Double_jump_count += 1
 	
 	#Handle dashing inputs & input direction and handle the movement/deceleration.
-	var direction := Input.get_axis("Left", "Right")
-	if Input.is_action_just_pressed("Dash") and dash_available:
-		dash_available = false
-		is_dashing = true
-		dash_direction = Facing
-		velocity.x += direction * dash_speed
-	if is_dashing:
-			velocity.x =   SPEED * dash_speed * dash_direction
-	if direction:
-		if not is_dashing:
-			velocity.x = direction * SPEED
-		if abs(direction) > 0:
-				Facing = direction
-	else:
-		velocity.x = move_toward(velocity.x, 0, SPEED)
-	
-	#emit attack signal on attack input
-	if Input.is_action_just_pressed("Attack") and attack_available == true:
-		Attack.emit(Facing)
-		attack_available = false
+	if stuntime <= 0:
+		var direction := Input.get_axis("Left", "Right")
+		if Input.is_action_just_pressed("Dash") and dash_available:
+			dash_available = false
+			is_dashing = true
+			dash_direction = Facing
+			velocity.x += direction * dash_speed
+		if is_dashing:
+				velocity.x =   SPEED * dash_speed * dash_direction
+		if direction:
+			if not is_dashing:
+				velocity.x = direction * SPEED
+			if abs(direction) > 0:
+					Facing = direction
+		else:
+			velocity.x = move_toward(velocity.x, 0, SPEED)
 		
-	#Handle crouch inputs	
-	if Input.is_action_just_pressed("Crouch"):
-		scale.y = 0.5
-		position.y += 51
-	if Input.is_action_just_released("Crouch"):
-		scale.y = 1
-
+		#emit attack signal on attack input
+		if Input.is_action_just_pressed("Attack") and attack_available == true:
+			Attack.emit(Facing)
+			attack_available = false
+			
+		#Handle crouch inputs	
+		if Input.is_action_just_pressed("Crouch"):
+			scale.y = 0.5
+			position.y += 51
+		if Input.is_action_just_released("Crouch"):
+			scale.y = 1
+	velocity.x += velocityxk
+	velocity.y += velocityyk
 		
 	move_and_slide()

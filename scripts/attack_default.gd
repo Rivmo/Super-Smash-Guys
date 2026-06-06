@@ -15,7 +15,6 @@ func _ready() -> void:
 func _process(delta: float) -> void:
 	if time < move_time :
 		position.x += Movement_speed_time * delta
-
 		Movement_speed_time -= 2 * Movement_speed/(move_time)
 		time += 1
 		
@@ -24,8 +23,14 @@ func _process(delta: float) -> void:
 
 func _on_area_2d_body_entered(body: Node2D) -> void:
 	#handle hitting the dummy with attack
-	if body.name == "Dummy":
-		print("hit dummy")
+	if body.name == "Dummy" and get_parent().name != "Dummy":
 		body.knockback += 10
 		var knockback = body.knockback * 4
 		body.apply_impulse(Vector2(dir*(400+knockback),10))
+	elif body.name == "Player" and get_parent().name != "Player":
+		body.knockback += 10
+		var knockback = body.knockback * 4 
+		body.velocityxk += dir*(100+knockback)
+		body.velocityyk += 10
+		body.stuntime = 0.2
+		

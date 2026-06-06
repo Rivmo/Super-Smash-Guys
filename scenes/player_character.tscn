@@ -7,6 +7,8 @@
 radius = 27.0
 height = 106.0
 
+[sub_resource type="QuadMesh" id="QuadMesh_6r27q"]
+
 [node name="Player" type="CharacterBody2D" unique_id=142461306]
 script = ExtResource("1_6r27q")
 
@@ -16,3 +18,15 @@ texture = ExtResource("1_56udc")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1431250880]
 shape = SubResource("CapsuleShape2D_6r27q")
+
+[node name="Red" type="MeshInstance2D" parent="." unique_id=1678775411]
+modulate = Color(1, 0, 0, 1)
+position = Vector2(0, -75)
+scale = Vector2(100, 10)
+mesh = SubResource("QuadMesh_6r27q")
+
+[node name="Green" type="MeshInstance2D" parent="." unique_id=516826604]
+modulate = Color(0, 1, 0, 1)
+position = Vector2(0, -75)
+scale = Vector2(100, 10)
+mesh = SubResource("QuadMesh_6r27q")
