@@ -98,52 +98,52 @@ layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
 
-[node name="ButtonSwitch" type="PanelContainer" parent="ScrollContainer/VBoxContainer" unique_id=1571563871]
+[node name="On_Off Setting" type="PanelContainer" parent="ScrollContainer/VBoxContainer" unique_id=1571563871]
 custom_minimum_size = Vector2(0, 45)
 layout_mode = 2
 
-[node name="MarginContainer" type="MarginContainer" parent="ScrollContainer/VBoxContainer/ButtonSwitch" unique_id=2064126163]
+[node name="MarginContainer" type="MarginContainer" parent="ScrollContainer/VBoxContainer/On_Off Setting" unique_id=2064126163]
 layout_mode = 2
 theme_override_constants/margin_left = 10
 
-[node name="SettingsLabel" type="Label" parent="ScrollContainer/VBoxContainer/ButtonSwitch/MarginContainer" unique_id=287511789]
+[node name="SettingsLabel" type="Label" parent="ScrollContainer/VBoxContainer/On_Off Setting/MarginContainer" unique_id=287511789]
 layout_mode = 2
 size_flags_horizontal = 2
 text = "sigma"
 
-[node name="MarginContainer2" type="MarginContainer" parent="ScrollContainer/VBoxContainer/ButtonSwitch" unique_id=1055315174]
+[node name="MarginContainer2" type="MarginContainer" parent="ScrollContainer/VBoxContainer/On_Off Setting" unique_id=1055315174]
 layout_mode = 2
 theme_override_constants/margin_top = 5
 theme_override_constants/margin_right = 10
 theme_override_constants/margin_bottom = 5
 
-[node name="SettingsButton" type="Button" parent="ScrollContainer/VBoxContainer/ButtonSwitch/MarginContainer2" unique_id=1914365548]
+[node name="SettingsButton" type="Button" parent="ScrollContainer/VBoxContainer/On_Off Setting/MarginContainer2" unique_id=1914365548]
 custom_minimum_size = Vector2(100, 0)
 layout_mode = 2
 size_flags_horizontal = 8
 text = "button.on"
 script = ExtResource("2_4emew")
 
-[node name="ButtonSwitch2" type="PanelContainer" parent="ScrollContainer/VBoxContainer" unique_id=604525211]
+[node name="Drop_Down Setting" type="PanelContainer" parent="ScrollContainer/VBoxContainer" unique_id=604525211]
 custom_minimum_size = Vector2(0, 45)
 layout_mode = 2
 
-[node name="MarginContainer" type="MarginContainer" parent="ScrollContainer/VBoxContainer/ButtonSwitch2" unique_id=12944576]
+[node name="MarginContainer" type="MarginContainer" parent="ScrollContainer/VBoxContainer/Drop_Down Setting" unique_id=12944576]
 layout_mode = 2
 theme_override_constants/margin_left = 10
 
-[node name="SettingsLabel" type="Label" parent="ScrollContainer/VBoxContainer/ButtonSwitch2/MarginContainer" unique_id=620911961]
+[node name="SettingsLabel" type="Label" parent="ScrollContainer/VBoxContainer/Drop_Down Setting/MarginContainer" unique_id=620911961]
 layout_mode = 2
 size_flags_horizontal = 2
 text = "sigma"
 
-[node name="MarginContainer2" type="MarginContainer" parent="ScrollContainer/VBoxContainer/ButtonSwitch2" unique_id=1211624359]
+[node name="MarginContainer2" type="MarginContainer" parent="ScrollContainer/VBoxContainer/Drop_Down Setting" unique_id=1211624359]
 layout_mode = 2
 theme_override_constants/margin_top = 5
 theme_override_constants/margin_right = 10
 theme_override_constants/margin_bottom = 5
 
-[node name="OptionButton" type="OptionButton" parent="ScrollContainer/VBoxContainer/ButtonSwitch2/MarginContainer2" unique_id=1437007057]
+[node name="OptionButton" type="OptionButton" parent="ScrollContainer/VBoxContainer/Drop_Down Setting/MarginContainer2" unique_id=1437007057]
 custom_minimum_size = Vector2(100, 0)
 layout_mode = 2
 size_flags_horizontal = 8
@@ -154,6 +154,106 @@ popup/item_0/id = 0
 popup/item_1/text = "option_button.spanish"
 popup/item_1/id = 1
 script = ExtResource("3_o38cp")
+
+[node name="Slider Setting" type="PanelContainer" parent="ScrollContainer/VBoxContainer" unique_id=635414906]
+custom_minimum_size = Vector2(0, 45)
+layout_mode = 2
+
+[node name="MarginContainer" type="MarginContainer" parent="ScrollContainer/VBoxContainer/Slider Setting" unique_id=1460204901]
+layout_mode = 2
+theme_override_constants/margin_left = 10
+
+[node name="SettingsLabel" type="Label" parent="ScrollContainer/VBoxContainer/Slider Setting/MarginContainer" unique_id=1331089378]
+layout_mode = 2
+size_flags_horizontal = 2
+text = "sigma"
+
+[node name="MarginContainer2" type="MarginContainer" parent="ScrollContainer/VBoxContainer/Slider Setting" unique_id=1427013622]
+layout_mode = 2
+theme_override_constants/margin_top = 5
+theme_override_constants/margin_right = 10
+theme_override_constants/margin_bottom = 5
+
+[node name="HBoxContainer" type="HBoxContainer" parent="ScrollContainer/VBoxContainer/Slider Setting/MarginContainer2" unique_id=386165462]
+layout_mode = 2
+size_flags_horizontal = 8
+
+[node name="VBoxContainer" type="VBoxContainer" parent="ScrollContainer/VBoxContainer/Slider Setting/MarginContainer2" unique_id=450219920]
+layout_mode = 2
+
+[node name="HBoxContainer" type="HBoxContainer" parent="ScrollContainer/VBoxContainer/Slider Setting/MarginContainer2/VBoxContainer" unique_id=1104306546]
+layout_mode = 2
+size_flags_horizontal = 8
+size_flags_vertical = 0
+theme_override_constants/separation = 0
+
+[node name="Label" type="Label" parent="ScrollContainer/VBoxContainer/Slider Setting/MarginContainer2/VBoxContainer/HBoxContainer" unique_id=435665379]
+custom_minimum_size = Vector2(30, 0)
+layout_mode = 2
+size_flags_horizontal = 8
+text = "1"
+horizontal_alignment = 1
+
+[node name="Label2" type="Label" parent="ScrollContainer/VBoxContainer/Slider Setting/MarginContainer2/VBoxContainer/HBoxContainer" unique_id=792477752]
+custom_minimum_size = Vector2(30, 0)
+layout_mode = 2
+size_flags_horizontal = 8
+text = "1"
+horizontal_alignment = 1
+
+[node name="Label3" type="Label" parent="ScrollContainer/VBoxContainer/Slider Setting/MarginContainer2/VBoxContainer/HBoxContainer" unique_id=1197213353]
+custom_minimum_size = Vector2(30, 0)
+layout_mode = 2
+size_flags_horizontal = 8
+text = "1"
+horizontal_alignment = 1
+
+[node name="Label4" type="Label" parent="ScrollContainer/VBoxContainer/Slider Setting/MarginContainer2/VBoxContainer/HBoxContainer" unique_id=1860324572]
+custom_minimum_size = Vector2(30, 0)
+layout_mode = 2
+size_flags_horizontal = 8
+text = "1"
+horizontal_alignment = 1
+
+[node name="Label5" type="Label" parent="ScrollContainer/VBoxContainer/Slider Setting/MarginContainer2/VBoxContainer/HBoxContainer" unique_id=49475467]
+custom_minimum_size = Vector2(30, 0)
+layout_mode = 2
+size_flags_horizontal = 8
+text = "1"
+horizontal_alignment = 1
+
+[node name="HSlider" type="HSlider" parent="ScrollContainer/VBoxContainer/Slider Setting/MarginContainer2/VBoxContainer" unique_id=1468171176]
+custom_minimum_size = Vector2(150, 0)
+layout_mode = 2
+size_flags_horizontal = 8
+size_flags_vertical = 8
+tick_count = 5
+ticks_on_borders = true
+ticks_position = 2
+
+[node name="Spinbox Setting" type="PanelContainer" parent="ScrollContainer/VBoxContainer" unique_id=1229414270]
+custom_minimum_size = Vector2(0, 45)
+layout_mode = 2
+
+[node name="MarginContainer" type="MarginContainer" parent="ScrollContainer/VBoxContainer/Spinbox Setting" unique_id=988684058]
+layout_mode = 2
+theme_override_constants/margin_left = 10
+
+[node name="SettingsLabel" type="Label" parent="ScrollContainer/VBoxContainer/Spinbox Setting/MarginContainer" unique_id=1012305077]
+layout_mode = 2
+size_flags_horizontal = 2
+text = "sigma"
+
+[node name="MarginContainer2" type="MarginContainer" parent="ScrollContainer/VBoxContainer/Spinbox Setting" unique_id=140885579]
+layout_mode = 2
+theme_override_constants/margin_top = 5
+theme_override_constants/margin_right = 10
+theme_override_constants/margin_bottom = 5
+
+[node name="SpinBox" type="SpinBox" parent="ScrollContainer/VBoxContainer/Spinbox Setting/MarginContainer2" unique_id=633226853]
+custom_minimum_size = Vector2(100, 0)
+layout_mode = 2
+size_flags_horizontal = 8
 
 [node name="MarginContainer3" type="MarginContainer" parent="." unique_id=801293409]
 layout_mode = 0
@@ -167,6 +267,6 @@ layout_mode = 2
 theme_override_font_sizes/font_size = 26
 text = "button.exit"
 
-[connection signal="pressed" from="ScrollContainer/VBoxContainer/ButtonSwitch/MarginContainer2/SettingsButton" to="ScrollContainer/VBoxContainer/ButtonSwitch/MarginContainer2/SettingsButton" method="_on_pressed"]
-[connection signal="item_selected" from="ScrollContainer/VBoxContainer/ButtonSwitch2/MarginContainer2/OptionButton" to="ScrollContainer/VBoxContainer/ButtonSwitch2/MarginContainer2/OptionButton" method="_on_item_selected"]
+[connection signal="pressed" from="ScrollContainer/VBoxContainer/On_Off Setting/MarginContainer2/SettingsButton" to="ScrollContainer/VBoxContainer/On_Off Setting/MarginContainer2/SettingsButton" method="_on_pressed"]
+[connection signal="item_selected" from="ScrollContainer/VBoxContainer/Drop_Down Setting/MarginContainer2/OptionButton" to="ScrollContainer/VBoxContainer/Drop_Down Setting/MarginContainer2/OptionButton" method="_on_item_selected"]
 [connection signal="pressed" from="MarginContainer3/Exit" to="." method="_on_exit_pressed"]
