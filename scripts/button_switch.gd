@@ -1,13 +1,9 @@
-extends PanelContainer
+extends Button
 
-@onready var buttontext = $MarginContainer2/SettingsButton
-# Called when the node enters the scene tree for the first time.
-func _ready() -> void:
-	buttontext.text = "suhdafkshjahfd"
-	pass 
+@onready var button = self
 
-
-
-func _process(delta: float) -> void:
-	
-	pass
+func _on_pressed() -> void:
+	if button.text == "button.on":
+		button.text = "button.off"
+	elif button.text == "button.off":
+		button.text = "button.on"

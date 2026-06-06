@@ -57,6 +57,10 @@ Attack={
 ]
 }
 
+[internationalization]
+
+locale/translations=PackedStringArray("res://ClientOptions/SSG_translations.en.translation", "res://ClientOptions/SSG_translations.es.translation")
+
 [physics]
 
 3d/physics_engine="Jolt Physics"

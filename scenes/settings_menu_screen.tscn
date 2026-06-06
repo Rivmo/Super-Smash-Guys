@@ -2,6 +2,7 @@
 
 [ext_resource type="Script" uid="uid://c0yhdwe7dab23" path="res://scripts/settings_menu_screen.gd" id="1_cie3p"]
 [ext_resource type="Script" uid="uid://ct7dkt6vlfj3i" path="res://scripts/button_switch.gd" id="2_4emew"]
+[ext_resource type="Script" uid="uid://xmmfh26in42w" path="res://scripts/option_button.gd" id="3_o38cp"]
 
 [node name="Settings Menu" type="Control" unique_id=251010454]
 layout_mode = 3
@@ -35,7 +36,7 @@ theme_override_constants/margin_top = 22
 layout_mode = 2
 size_flags_horizontal = 4
 theme_override_font_sizes/font_size = 70
-text = "Settings"
+text = "label.settings"
 
 [node name="MarginContainer2" type="MarginContainer" parent="." unique_id=1657634197]
 layout_direction = 2
@@ -58,31 +59,31 @@ size_flags_vertical = 4
 layout_mode = 2
 size_flags_horizontal = 0
 theme_override_font_sizes/font_size = 45
-text = "General"
+text = "button.general"
 
 [node name="Video" type="Button" parent="MarginContainer2/VBoxContainer" unique_id=249233468]
 layout_mode = 2
 size_flags_horizontal = 0
 theme_override_font_sizes/font_size = 45
-text = "Video"
+text = "button.video"
 
 [node name="Audio" type="Button" parent="MarginContainer2/VBoxContainer" unique_id=1556858039]
 layout_mode = 2
 size_flags_horizontal = 0
 theme_override_font_sizes/font_size = 45
-text = "Audio"
+text = "button.audio"
 
 [node name="Controls" type="Button" parent="MarginContainer2/VBoxContainer" unique_id=1533968758]
 layout_mode = 2
 size_flags_horizontal = 0
 theme_override_font_sizes/font_size = 45
-text = "Controls"
+text = "button.controls"
 
 [node name="Music" type="Button" parent="MarginContainer2/VBoxContainer" unique_id=1556690114]
 layout_mode = 2
 size_flags_horizontal = 0
 theme_override_font_sizes/font_size = 45
-text = "Music"
+text = "button.misc"
 
 [node name="ScrollContainer" type="ScrollContainer" parent="." unique_id=2077631856]
 layout_mode = 1
@@ -100,7 +101,6 @@ size_flags_vertical = 3
 [node name="ButtonSwitch" type="PanelContainer" parent="ScrollContainer/VBoxContainer" unique_id=1571563871]
 custom_minimum_size = Vector2(0, 45)
 layout_mode = 2
-script = ExtResource("2_4emew")
 
 [node name="MarginContainer" type="MarginContainer" parent="ScrollContainer/VBoxContainer/ButtonSwitch" unique_id=2064126163]
 layout_mode = 2
@@ -121,7 +121,39 @@ theme_override_constants/margin_bottom = 5
 custom_minimum_size = Vector2(100, 0)
 layout_mode = 2
 size_flags_horizontal = 8
-text = "On"
+text = "button.on"
+script = ExtResource("2_4emew")
+
+[node name="ButtonSwitch2" type="PanelContainer" parent="ScrollContainer/VBoxContainer" unique_id=604525211]
+custom_minimum_size = Vector2(0, 45)
+layout_mode = 2
+
+[node name="MarginContainer" type="MarginContainer" parent="ScrollContainer/VBoxContainer/ButtonSwitch2" unique_id=12944576]
+layout_mode = 2
+theme_override_constants/margin_left = 10
+
+[node name="SettingsLabel" type="Label" parent="ScrollContainer/VBoxContainer/ButtonSwitch2/MarginContainer" unique_id=620911961]
+layout_mode = 2
+size_flags_horizontal = 2
+text = "sigma"
+
+[node name="MarginContainer2" type="MarginContainer" parent="ScrollContainer/VBoxContainer/ButtonSwitch2" unique_id=1211624359]
+layout_mode = 2
+theme_override_constants/margin_top = 5
+theme_override_constants/margin_right = 10
+theme_override_constants/margin_bottom = 5
+
+[node name="OptionButton" type="OptionButton" parent="ScrollContainer/VBoxContainer/ButtonSwitch2/MarginContainer2" unique_id=1437007057]
+custom_minimum_size = Vector2(100, 0)
+layout_mode = 2
+size_flags_horizontal = 8
+selected = 0
+item_count = 2
+popup/item_0/text = "option_button.english"
+popup/item_0/id = 0
+popup/item_1/text = "option_button.spanish"
+popup/item_1/id = 1
+script = ExtResource("3_o38cp")
 
 [node name="MarginContainer3" type="MarginContainer" parent="." unique_id=801293409]
 layout_mode = 0
@@ -133,6 +165,8 @@ theme_override_constants/margin_top = 10
 [node name="Exit" type="Button" parent="MarginContainer3" unique_id=1134614209]
 layout_mode = 2
 theme_override_font_sizes/font_size = 26
-text = "Exit"
+text = "button.exit"
 
+[connection signal="pressed" from="ScrollContainer/VBoxContainer/ButtonSwitch/MarginContainer2/SettingsButton" to="ScrollContainer/VBoxContainer/ButtonSwitch/MarginContainer2/SettingsButton" method="_on_pressed"]
+[connection signal="item_selected" from="ScrollContainer/VBoxContainer/ButtonSwitch2/MarginContainer2/OptionButton" to="ScrollContainer/VBoxContainer/ButtonSwitch2/MarginContainer2/OptionButton" method="_on_item_selected"]
 [connection signal="pressed" from="MarginContainer3/Exit" to="." method="_on_exit_pressed"]

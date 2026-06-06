@@ -55,27 +55,27 @@ theme_override_constants/separation = 4
 [node name="Multiplayer" type="Button" parent="VBoxContainer" unique_id=1560336704]
 layout_mode = 2
 theme_override_font_sizes/font_size = 30
-text = "Multiplayer"
+text = "button.multiplayer"
 
 [node name="Practice" type="Button" parent="VBoxContainer" unique_id=867438607]
 layout_mode = 2
 theme_override_font_sizes/font_size = 30
-text = "Practice"
+text = "button.practice"
 
 [node name="Settings" type="Button" parent="VBoxContainer" unique_id=79877832]
 layout_mode = 2
 theme_override_font_sizes/font_size = 30
-text = "Settings"
+text = "button.settings"
 
 [node name="Credits" type="Button" parent="VBoxContainer" unique_id=1289616389]
 layout_mode = 2
 theme_override_font_sizes/font_size = 30
-text = "Credits"
+text = "button.credits"
 
 [node name="Exit" type="Button" parent="VBoxContainer" unique_id=2071948664]
 layout_mode = 2
 theme_override_font_sizes/font_size = 30
-text = "Exit"
+text = "button.exit"
 
 [connection signal="pressed" from="VBoxContainer/Multiplayer" to="." method="_on_multiplayer_pressed"]
 [connection signal="pressed" from="VBoxContainer/Practice" to="." method="_on_practice_pressed"]

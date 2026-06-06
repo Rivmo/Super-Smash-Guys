@@ -1,0 +1,19 @@
+[remap]
+
+importer="csv_translation"
+type="Translation"
+uid="uid://cyorpcva2wc84"
+
+[deps]
+
+files=["res://ClientOptions/SSG_translations.en.translation", "res://ClientOptions/SSG_translations.es.translation"]
+
+source_file="res://ClientOptions/SSG_translations.csv"
+dest_files=["res://ClientOptions/SSG_translations.en.translation", "res://ClientOptions/SSG_translations.es.translation"]
+
+[params]
+
+compress=1
+delimiter=0
+unescape_keys=false
+unescape_translations=true
