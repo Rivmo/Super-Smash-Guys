@@ -3,6 +3,7 @@
 [ext_resource type="Script" uid="uid://c0yhdwe7dab23" path="res://scripts/settings_menu_screen.gd" id="1_cie3p"]
 [ext_resource type="Script" uid="uid://ct7dkt6vlfj3i" path="res://scripts/fullscreen_option.gd" id="2_4emew"]
 [ext_resource type="Script" uid="uid://xmmfh26in42w" path="res://scripts/language_option.gd" id="3_o38cp"]
+[ext_resource type="Script" uid="uid://hfjsg6iwmqb0" path="res://scripts/fps_option.gd" id="4_mjea3"]
 
 [node name="Settings Menu" type="Control" unique_id=251010454]
 layout_mode = 3
@@ -267,7 +268,7 @@ theme_override_constants/margin_left = 10
 [node name="SettingsLabel" type="Label" parent="ScrollContainer/VBoxContainer/Spinbox Setting/MarginContainer" unique_id=1012305077]
 layout_mode = 2
 size_flags_horizontal = 2
-text = "sigma"
+text = "label.max_fps"
 
 [node name="MarginContainer2" type="MarginContainer" parent="ScrollContainer/VBoxContainer/Spinbox Setting" unique_id=140885579]
 layout_mode = 2
@@ -279,6 +280,13 @@ theme_override_constants/margin_bottom = 5
 custom_minimum_size = Vector2(100, 0)
 layout_mode = 2
 size_flags_horizontal = 8
+min_value = 10.0
+max_value = 120.0
+step = 10.0
+value = 10.0
+rounded = true
+allow_greater = true
+script = ExtResource("4_mjea3")
 
 [node name="MarginContainer3" type="MarginContainer" parent="." unique_id=801293409]
 layout_mode = 0
@@ -295,4 +303,5 @@ text = "button.exit"
 [connection signal="pressed" from="ScrollContainer/VBoxContainer/On_Off Setting/MarginContainer2/SettingsButton" to="ScrollContainer/VBoxContainer/On_Off Setting/MarginContainer2/SettingsButton" method="_on_pressed"]
 [connection signal="pressed" from="ScrollContainer/VBoxContainer/On_Off Setting2/MarginContainer2/SettingsButton" to="ScrollContainer/VBoxContainer/On_Off Setting2/MarginContainer2/SettingsButton" method="_on_pressed"]
 [connection signal="item_selected" from="ScrollContainer/VBoxContainer/Drop_Down Setting/MarginContainer2/OptionButton" to="ScrollContainer/VBoxContainer/Drop_Down Setting/MarginContainer2/OptionButton" method="_on_item_selected"]
+[connection signal="changed" from="ScrollContainer/VBoxContainer/Spinbox Setting/MarginContainer2/SpinBox" to="ScrollContainer/VBoxContainer/Spinbox Setting/MarginContainer2/SpinBox" method="_on_changed"]
 [connection signal="pressed" from="MarginContainer3/Exit" to="." method="_on_exit_pressed"]
