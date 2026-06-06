@@ -10,7 +10,11 @@ var MapVotes := [0,0,0,0,0] # The first index is A TEMPORARY, but do NOT remove 
 var MapLastVoted := 0
 var MapVoted := 0
 var IsMapChosen := false
-const PlaceholderArena = preload("res://scenes/placeholder_arena.tscn")
+var votedtoskip := false
+var totalvotesforskip := 0
+var votesneededtoskip := 1
+const map_placeholder = preload("res://scenes/maps/map_placeholder.tscn")
+const placeholder_arena = preload("res://scenes/maps/placeholder_arena.tscn")
 @onready var VoteTimerLabel = $ColorRect/MarginContainer/Panel/Label
 @onready var MapVoteTimer = $ColorRect/MapVoteTimer
 func _process(delta: float) -> void:
@@ -18,6 +22,12 @@ func _process(delta: float) -> void:
 	$ColorRect/VBoxContainer/HBoxContainer2/Label2.text = str(MapVotes[2])
 	$ColorRect/VBoxContainer/HBoxContainer2/Label3.text = str(MapVotes[3])
 	$ColorRect/VBoxContainer/HBoxContainer2/Label4.text = str(MapVotes[4])
+	
+	$ColorRect/MarginContainer2/VBoxContainer/votesneeded.text = (str(totalvotesforskip) + "/" + str(votesneededtoskip))
+	
+	if totalvotesforskip >= votesneededtoskip:
+		MapVoteTimer.stop()
+	
 	if MapVoteTimer.time_left >= 10:
 		VoteTimerLabel.text = (str(MapVoteTimer.time_left).substr(0,4)+"s")
 	else:
@@ -42,11 +52,11 @@ func loadmap() -> void:
 	var selectedmap = getmostvoted(MapVotes)
 	if selectedmap == 1:
 		print("Loading map 1")
-		get_tree().current_scene.add_child(PlaceholderArena.instantiate())
+		get_tree().current_scene.add_child(map_placeholder.instantiate())
 		$ColorRect.visible = false
 	elif selectedmap == 2:
 		print("Loading map 2")
-		
+		get_tree().current_scene.add_child(placeholder_arena.instantiate())
 		$ColorRect.visible = false
 	elif selectedmap == 3:
 		print("Loading map 3")
@@ -72,3 +82,7 @@ func _on_button_3_pressed() -> void:
 	ReassignVotes(3)
 func _on_button_4_pressed() -> void:
 	ReassignVotes(4)
+func _on_skipvotingbutton_pressed() -> void:
+	if votedtoskip == false:
+		totalvotesforskip += 1
+		votedtoskip = true

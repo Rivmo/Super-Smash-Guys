@@ -1,0 +1,48 @@
+[gd_scene format=3 uid="uid://dtejskw0b56l1"]
+
+[ext_resource type="Script" uid="uid://c74aoimcssv2o" path="res://scripts/placeholder_arena.gd" id="1_m74u3"]
+[ext_resource type="PackedScene" uid="uid://b0x3345qebl54" path="res://scenes/player_character.tscn" id="2_w1ypv"]
+[ext_resource type="PackedScene" uid="uid://cff2uoaxsga1o" path="res://scenes/Dummy.tscn" id="3_yyjrg"]
+
+[sub_resource type="QuadMesh" id="QuadMesh_hunim"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_hunim"]
+size = Vector2(1100, 65)
+
+[node name="Node2D" type="Node2D" unique_id=2101625577]
+script = ExtResource("1_m74u3")
+
+[node name="Player" parent="." unique_id=142461306 instance=ExtResource("2_w1ypv")]
+position = Vector2(337, 515)
+
+[node name="StaticBody2D" type="StaticBody2D" parent="." unique_id=27430171]
+position = Vector2(640, 500)
+
+[node name="MeshInstance2D" type="MeshInstance2D" parent="StaticBody2D" unique_id=1704214878]
+position = Vector2(10.499989, 132.49998)
+scale = Vector2(1099, 65.00003)
+mesh = SubResource("QuadMesh_hunim")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D" unique_id=393426004]
+position = Vector2(11, 132.5)
+shape = SubResource("RectangleShape2D_hunim")
+debug_color = Color(0, 0.6, 0.69803923, 0.41568628)
+
+[node name="StaticBody2D2" type="StaticBody2D" parent="." unique_id=1646547923]
+position = Vector2(638, 564)
+scale = Vector2(4.211956, 0.9873548)
+
+[node name="MeshInstance2D" type="MeshInstance2D" parent="StaticBody2D2" unique_id=787715542]
+position = Vector2(10.499989, 132.49998)
+scale = Vector2(1099, 65.00003)
+mesh = SubResource("QuadMesh_hunim")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D2" unique_id=701882317]
+position = Vector2(11, 132.5)
+shape = SubResource("RectangleShape2D_hunim")
+debug_color = Color(0, 0.6, 0.69803923, 0.41568628)
+
+[node name="Dummy" parent="." unique_id=1693198927 instance=ExtResource("3_yyjrg")]
+position = Vector2(959, 504)
+
+[connection signal="Attack" from="Player" to="." method="_on_character_attack"]

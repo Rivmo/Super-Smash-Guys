@@ -18,6 +18,38 @@ offset_right = 1280.0
 offset_bottom = 718.0
 color = Color(0.105882354, 0.105882354, 0.105882354, 0.37254903)
 
+[node name="MarginContainer2" type="MarginContainer" parent="MapVotingUI/ColorRect" unique_id=1286580936]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -482.0
+offset_top = -35.0
+offset_right = 482.0
+offset_bottom = 35.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_top = 250
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MapVotingUI/ColorRect/MarginContainer2" unique_id=549843995]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+
+[node name="skipvotingbutton" type="Button" parent="MapVotingUI/ColorRect/MarginContainer2/VBoxContainer" unique_id=436229869]
+custom_minimum_size = Vector2(200, 50)
+layout_mode = 2
+theme_override_font_sizes/font_size = 30
+text = "button.skip_voting"
+
+[node name="votesneeded" type="Label" parent="MapVotingUI/ColorRect/MarginContainer2/VBoxContainer" unique_id=1498247449]
+layout_mode = 2
+size_flags_horizontal = 6
+theme_override_font_sizes/font_size = 35
+text = "0/0"
+
 [node name="VBoxContainer" type="VBoxContainer" parent="MapVotingUI/ColorRect" unique_id=263457762]
 layout_mode = 1
 anchors_preset = 8
@@ -111,44 +143,17 @@ text = "timer"
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="MarginContainer2" type="MarginContainer" parent="MapVotingUI/ColorRect" unique_id=1286580936]
-layout_mode = 1
-anchors_preset = 8
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-offset_left = -482.0
-offset_top = -35.0
-offset_right = 482.0
-offset_bottom = 35.0
-grow_horizontal = 2
-grow_vertical = 2
-theme_override_constants/margin_top = 250
-
-[node name="VBoxContainer" type="VBoxContainer" parent="MapVotingUI/ColorRect/MarginContainer2" unique_id=549843995]
-layout_mode = 2
-size_flags_horizontal = 4
-size_flags_vertical = 4
-
-[node name="Button" type="Button" parent="MapVotingUI/ColorRect/MarginContainer2/VBoxContainer" unique_id=436229869]
-custom_minimum_size = Vector2(200, 50)
-layout_mode = 2
-theme_override_font_sizes/font_size = 30
-text = "button.skip_voting"
-
-[node name="label" type="Label" parent="MapVotingUI/ColorRect/MarginContainer2/VBoxContainer" unique_id=1498247449]
-layout_mode = 2
-size_flags_horizontal = 6
-theme_override_font_sizes/font_size = 35
-text = "0/0"
-
 [node name="MapVoteTimer" type="Timer" parent="MapVotingUI/ColorRect" unique_id=1901770375]
 wait_time = 15.0
 one_shot = true
 autostart = true
 
+[connection signal="pressed" from="MapVotingUI/ColorRect/MarginContainer2/VBoxContainer/skipvotingbutton" to="MapVotingUI" method="_on_skipvotingbutton_pressed"]
+[connection signal="pressed" from="MapVotingUI/ColorRect/VBoxContainer/HBoxContainer/Button" to="MapVotingUI" method="_on_button_pressed"]
 [connection signal="pressed" from="MapVotingUI/ColorRect/VBoxContainer/HBoxContainer/Button" to="MapVotingUI/ColorRect/VBoxContainer" method="_on_button_pressed"]
+[connection signal="pressed" from="MapVotingUI/ColorRect/VBoxContainer/HBoxContainer/Button2" to="MapVotingUI" method="_on_button_2_pressed"]
 [connection signal="pressed" from="MapVotingUI/ColorRect/VBoxContainer/HBoxContainer/Button2" to="MapVotingUI/ColorRect/VBoxContainer" method="_on_button_2_pressed"]
+[connection signal="pressed" from="MapVotingUI/ColorRect/VBoxContainer/HBoxContainer/Button3" to="MapVotingUI" method="_on_button_3_pressed"]
 [connection signal="pressed" from="MapVotingUI/ColorRect/VBoxContainer/HBoxContainer/Button3" to="MapVotingUI/ColorRect/VBoxContainer" method="_on_button_3_pressed"]
+[connection signal="pressed" from="MapVotingUI/ColorRect/VBoxContainer/HBoxContainer/Button4" to="MapVotingUI" method="_on_button_4_pressed"]
 [connection signal="pressed" from="MapVotingUI/ColorRect/VBoxContainer/HBoxContainer/Button4" to="MapVotingUI/ColorRect/VBoxContainer" method="_on_button_4_pressed"]
