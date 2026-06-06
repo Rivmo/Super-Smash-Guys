@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://cn6srbhlwesby"]
 
-[ext_resource type="Script" uid="uid://bds4p1kk6kofw" path="res://scripts/main_menu_screen.gd" id="1_aqvks"]
+[ext_resource type="Script" uid="uid://dai77jnd2dck6" path="res://scripts/multiplayer_select_screen.gd" id="1_8g5g0"]
 [ext_resource type="Script" uid="uid://o6coobbymf2x" path="res://scripts/join_text_box.gd" id="2_8g5g0"]
 
 [node name="Multiplayer Menu" type="Control" unique_id=1049558189]
@@ -10,7 +10,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-script = ExtResource("1_aqvks")
+script = ExtResource("1_8g5g0")
 
 [node name="ColorRect" type="ColorRect" parent="." unique_id=1097477698]
 layout_mode = 1
