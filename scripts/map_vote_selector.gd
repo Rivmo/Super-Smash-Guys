@@ -1,9 +1,16 @@
 extends VBoxContainer
 
+# ADDING MORE MAPS (instructions)
+# add one more 0 to the MapVotes variable
+# add an elif statement for selecting your new map in the loadmap function
+# add another label & button to the ui, also make sure tha the text is being updated in the _process function
+# I may edit this code to be better later - river
+
 var MapVotes := [0,0,0,0,0] # The first index is A TEMPORARY, but do NOT remove it because otherwise the last voted function is poopy head
 var MapLastVoted := 0
 var MapVoted := 0
 var IsMapChosen := false
+const PlaceholderArena = preload("res://scenes/placeholder_arena.tscn")
 @onready var VoteTimerLabel = $"../MarginContainer/Panel/Label"
 @onready var MapVoteTimer = $"../MapVoteTimer"
 func _process(delta: float) -> void:
@@ -14,7 +21,6 @@ func _process(delta: float) -> void:
 	VoteTimerLabel.text = str(MapVoteTimer.time_left).substr(0,4)
 	if MapVoteTimer.time_left == 0.0 and IsMapChosen == false:
 		loadmap()
-	
 
 func getmostvoted(Votes):
 	var potential := [0] # Number of votes on potential maps, map numbers
@@ -33,6 +39,8 @@ func loadmap() -> void:
 	var selectedmap = getmostvoted(MapVotes)
 	if selectedmap == 1:
 		print("Loading map 1")
+		get_tree().current_scene.add_child(PlaceholderArena.instantiate())
+		$"..".visible = false
 	elif selectedmap == 2:
 		print("Loading map 2")
 	elif selectedmap == 3:

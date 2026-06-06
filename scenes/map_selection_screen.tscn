@@ -11,7 +11,13 @@ offset_top = 1.0
 offset_right = 1280.0
 offset_bottom = 720.0
 
-[node name="VBoxContainer" type="VBoxContainer" parent="Control" unique_id=263457762]
+[node name="ColorRect" type="ColorRect" parent="Control" unique_id=425518238]
+layout_mode = 0
+offset_right = 1280.0
+offset_bottom = 718.0
+color = Color(0.105882354, 0.105882354, 0.105882354, 0.37254903)
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Control/ColorRect" unique_id=263457762]
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
@@ -19,81 +25,81 @@ anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
 offset_left = -482.0
-offset_top = -28.5
+offset_top = -54.0
 offset_right = 482.0
-offset_bottom = 28.5
+offset_bottom = 55.0
 grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_jggg5")
 
-[node name="HBoxContainer" type="HBoxContainer" parent="Control/VBoxContainer" unique_id=924079714]
+[node name="HBoxContainer" type="HBoxContainer" parent="Control/ColorRect/VBoxContainer" unique_id=924079714]
 layout_mode = 2
 
-[node name="Button" type="Button" parent="Control/VBoxContainer/HBoxContainer" unique_id=712526198]
+[node name="Button" type="Button" parent="Control/ColorRect/VBoxContainer/HBoxContainer" unique_id=712526198]
 layout_mode = 2
 theme_override_font_sizes/font_size = 35
 text = "Map Option 1"
 
-[node name="Button2" type="Button" parent="Control/VBoxContainer/HBoxContainer" unique_id=254586376]
+[node name="Button2" type="Button" parent="Control/ColorRect/VBoxContainer/HBoxContainer" unique_id=254586376]
 layout_mode = 2
 theme_override_font_sizes/font_size = 35
 text = "Map Option 2"
 
-[node name="Button3" type="Button" parent="Control/VBoxContainer/HBoxContainer" unique_id=1077786462]
+[node name="Button3" type="Button" parent="Control/ColorRect/VBoxContainer/HBoxContainer" unique_id=1077786462]
 layout_mode = 2
 theme_override_font_sizes/font_size = 35
 text = "Map Option 3"
 
-[node name="Button4" type="Button" parent="Control/VBoxContainer/HBoxContainer" unique_id=745379611]
+[node name="Button4" type="Button" parent="Control/ColorRect/VBoxContainer/HBoxContainer" unique_id=745379611]
 layout_mode = 2
 theme_override_font_sizes/font_size = 35
 text = "Map Option 4"
 
-[node name="HBoxContainer2" type="HBoxContainer" parent="Control/VBoxContainer" unique_id=520099248]
+[node name="HBoxContainer2" type="HBoxContainer" parent="Control/ColorRect/VBoxContainer" unique_id=520099248]
 layout_mode = 2
 
-[node name="Label" type="Label" parent="Control/VBoxContainer/HBoxContainer2" unique_id=2024557266]
-layout_mode = 2
-size_flags_horizontal = 6
-theme_override_font_sizes/font_size = 35
-text = "0"
-
-[node name="Label2" type="Label" parent="Control/VBoxContainer/HBoxContainer2" unique_id=1319672625]
+[node name="Label" type="Label" parent="Control/ColorRect/VBoxContainer/HBoxContainer2" unique_id=2024557266]
 layout_mode = 2
 size_flags_horizontal = 6
 theme_override_font_sizes/font_size = 35
 text = "0"
 
-[node name="Label3" type="Label" parent="Control/VBoxContainer/HBoxContainer2" unique_id=848506631]
+[node name="Label2" type="Label" parent="Control/ColorRect/VBoxContainer/HBoxContainer2" unique_id=1319672625]
 layout_mode = 2
 size_flags_horizontal = 6
 theme_override_font_sizes/font_size = 35
 text = "0"
 
-[node name="Label4" type="Label" parent="Control/VBoxContainer/HBoxContainer2" unique_id=256607248]
+[node name="Label3" type="Label" parent="Control/ColorRect/VBoxContainer/HBoxContainer2" unique_id=848506631]
 layout_mode = 2
 size_flags_horizontal = 6
 theme_override_font_sizes/font_size = 35
 text = "0"
 
-[node name="MarginContainer" type="MarginContainer" parent="Control" unique_id=401333175]
+[node name="Label4" type="Label" parent="Control/ColorRect/VBoxContainer/HBoxContainer2" unique_id=256607248]
+layout_mode = 2
+size_flags_horizontal = 6
+theme_override_font_sizes/font_size = 35
+text = "0"
+
+[node name="MarginContainer" type="MarginContainer" parent="Control/ColorRect" unique_id=401333175]
 layout_mode = 1
 anchors_preset = 5
 anchor_left = 0.5
 anchor_right = 0.5
 offset_left = -482.0
 offset_right = 482.0
-offset_bottom = 50.0
+offset_bottom = 70.0
 grow_horizontal = 2
 theme_override_constants/margin_top = 20
 
-[node name="Panel" type="Panel" parent="Control/MarginContainer" unique_id=146852267]
+[node name="Panel" type="Panel" parent="Control/ColorRect/MarginContainer" unique_id=146852267]
 custom_minimum_size = Vector2(150, 50)
 layout_mode = 2
 size_flags_horizontal = 4
 size_flags_vertical = 0
 
-[node name="Label" type="Label" parent="Control/MarginContainer/Panel" unique_id=1004708092]
+[node name="Label" type="Label" parent="Control/ColorRect/MarginContainer/Panel" unique_id=1004708092]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -104,12 +110,12 @@ theme_override_font_sizes/font_size = 30
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="MapVoteTimer" type="Timer" parent="Control" unique_id=1901770375]
+[node name="MapVoteTimer" type="Timer" parent="Control/ColorRect" unique_id=1901770375]
 wait_time = 3.0
 one_shot = true
 autostart = true
 
-[connection signal="pressed" from="Control/VBoxContainer/HBoxContainer/Button" to="Control/VBoxContainer" method="_on_button_pressed"]
-[connection signal="pressed" from="Control/VBoxContainer/HBoxContainer/Button2" to="Control/VBoxContainer" method="_on_button_2_pressed"]
-[connection signal="pressed" from="Control/VBoxContainer/HBoxContainer/Button3" to="Control/VBoxContainer" method="_on_button_3_pressed"]
-[connection signal="pressed" from="Control/VBoxContainer/HBoxContainer/Button4" to="Control/VBoxContainer" method="_on_button_4_pressed"]
+[connection signal="pressed" from="Control/ColorRect/VBoxContainer/HBoxContainer/Button" to="Control/ColorRect/VBoxContainer" method="_on_button_pressed"]
+[connection signal="pressed" from="Control/ColorRect/VBoxContainer/HBoxContainer/Button2" to="Control/ColorRect/VBoxContainer" method="_on_button_2_pressed"]
+[connection signal="pressed" from="Control/ColorRect/VBoxContainer/HBoxContainer/Button3" to="Control/ColorRect/VBoxContainer" method="_on_button_3_pressed"]
+[connection signal="pressed" from="Control/ColorRect/VBoxContainer/HBoxContainer/Button4" to="Control/ColorRect/VBoxContainer" method="_on_button_4_pressed"]
