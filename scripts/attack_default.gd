@@ -30,8 +30,8 @@ func _on_area_2d_body_entered(body: Node2D) -> void:
 		body.apply_impulse(Vector2(dir*(400+knockback),10))
 	elif body.name == "Player" and get_parent().name != "Player":
 		body.knockback += 10
-		var knockback = body.knockback * 100
-		body.velocityxk += dir*(2000+knockback)
+		var knockback = body.knockback * 200
+		body.velocityxk += dir*(40000+knockback)
 		body.velocityyk += 10
 		body.stuntime = 0.2
 		

@@ -70,7 +70,7 @@ func _process(delta: float) -> void:
 	
 
 func _physics_process(delta: float) -> void:
-	
+	velocity.x = 0
 	# Add the gravity.
 	if not is_on_floor():
 		velocity += get_gravity() * delta
@@ -94,10 +94,10 @@ func _physics_process(delta: float) -> void:
 			dash_direction = Facing
 			velocity.x += direction * dash_speed
 		if is_dashing:
-				velocity.x =   SPEED * dash_speed * dash_direction 
+				velocity.x +=   SPEED * dash_speed * dash_direction 
 		if direction:
 			if not is_dashing:
-				velocity.x = direction * SPEED
+				velocity.x += direction * SPEED
 			if abs(direction) > 0:
 					Facing = direction
 		else:
