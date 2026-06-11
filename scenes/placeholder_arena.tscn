@@ -1,0 +1,105 @@
+[gd_scene format=3 uid="uid://bm7i7iktig7tk"]
+
+[ext_resource type="Script" uid="uid://c74aoimcssv2o" path="res://scripts/placeholder_arena.gd" id="1_b24y5"]
+[ext_resource type="PackedScene" uid="uid://b0x3345qebl54" path="res://scenes/player_character.tscn" id="1_hunim"]
+[ext_resource type="PackedScene" uid="uid://cff2uoaxsga1o" path="res://scenes/Dummy.tscn" id="3_kadwe"]
+[ext_resource type="Texture2D" uid="uid://bvsp47waemsrw" path="res://images/svg_icon_3_bars.png" id="4_4khq4"]
+[ext_resource type="Script" uid="uid://d3qmgjgut56a" path="res://scripts/Exits/exit_menu.gd" id="4_tqfwa"]
+[ext_resource type="Script" uid="uid://dcjvoi2lcdapc" path="res://scripts/Exits/exit_menu_2.gd" id="5_dvwu8"]
+
+[sub_resource type="QuadMesh" id="QuadMesh_hunim"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_hunim"]
+size = Vector2(1100, 65)
+
+[node name="Node2D" type="Node2D" unique_id=2101625577]
+script = ExtResource("1_b24y5")
+
+[node name="Player" parent="." unique_id=142461306 instance=ExtResource("1_hunim")]
+position = Vector2(556, -70)
+
+[node name="StaticBody2D" type="StaticBody2D" parent="." unique_id=27430171]
+position = Vector2(640, 500)
+
+[node name="MeshInstance2D" type="MeshInstance2D" parent="StaticBody2D" unique_id=1704214878]
+position = Vector2(10.499989, 132.49998)
+scale = Vector2(1099, 65.00003)
+mesh = SubResource("QuadMesh_hunim")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D" unique_id=393426004]
+position = Vector2(11, 132.5)
+shape = SubResource("RectangleShape2D_hunim")
+debug_color = Color(0, 0.6, 0.69803923, 0.41568628)
+
+[node name="Dummy" parent="." unique_id=1693198927 instance=ExtResource("3_kadwe")]
+position = Vector2(749, -73)
+
+[node name="Control" type="Control" parent="." unique_id=391749387]
+layout_mode = 3
+anchors_preset = 0
+offset_top = 1.0
+offset_right = 1280.0
+offset_bottom = 720.0
+script = ExtResource("4_tqfwa")
+
+[node name="ColorRect" type="ColorRect" parent="Control" unique_id=319467344]
+visible = false
+layout_mode = 0
+offset_right = 1280.0
+offset_bottom = 718.0
+color = Color(0.105882354, 0.105882354, 0.105882354, 0.37254903)
+script = ExtResource("5_dvwu8")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Control/ColorRect" unique_id=1165155593]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -208.5
+offset_top = -136.0
+offset_right = 208.5
+offset_bottom = 107.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Back to game" type="Button" parent="Control/ColorRect/VBoxContainer" unique_id=861050198]
+layout_mode = 2
+theme_override_font_sizes/font_size = 30
+text = "Back to game"
+
+[node name="Options" type="Button" parent="Control/ColorRect/VBoxContainer" unique_id=1338357739]
+layout_mode = 2
+theme_override_font_sizes/font_size = 30
+text = "Options"
+
+[node name="Exit to main menu" type="Button" parent="Control/ColorRect/VBoxContainer" unique_id=39776803]
+layout_mode = 2
+theme_override_font_sizes/font_size = 30
+text = "Exit to main menu"
+
+[node name="Exit Game" type="Button" parent="Control/ColorRect/VBoxContainer" unique_id=713976548]
+layout_mode = 2
+theme_override_font_sizes/font_size = 30
+text = "Exit Game"
+
+[node name="Button" type="Button" parent="Control" unique_id=87249368]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.11400001
+anchor_top = 0.12900001
+anchor_right = 0.11400001
+anchor_bottom = 0.12900001
+offset_left = -129.92001
+offset_top = -79.75101
+offset_right = -69.92001
+offset_bottom = -19.751007
+theme_override_icons/icon = ExtResource("4_4khq4")
+icon_alignment = 1
+
+[connection signal="Attack" from="Player" to="." method="_on_character_attack"]
+[connection signal="pressed" from="Control/ColorRect/VBoxContainer/Back to game" to="Control/ColorRect" method="_on_back_to_game_pressed"]
+[connection signal="pressed" from="Control/ColorRect/VBoxContainer/Exit to main menu" to="Control" method="_on_exit_to_main_menu_pressed"]
+[connection signal="pressed" from="Control/ColorRect/VBoxContainer/Exit Game" to="Control" method="_on_exit_game_pressed"]
+[connection signal="pressed" from="Control/Button" to="Control/ColorRect" method="_on_button_pressed"]

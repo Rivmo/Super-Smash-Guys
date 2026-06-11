@@ -110,12 +110,6 @@ layout_mode = 2
 theme_override_font_sizes/font_size = 30
 text = "Join Game"
 
-[node name="username_box" type="LineEdit" parent="VBoxContainer" unique_id=2063861673]
-layout_mode = 2
-theme_override_font_sizes/font_size = 30
-placeholder_text = "Create a name"
-alignment = 1
-
 [node name="join_text_box" type="LineEdit" parent="VBoxContainer" unique_id=409045426]
 layout_mode = 2
 theme_override_constants/minimum_character_width = 9
@@ -136,6 +130,5 @@ text = "Exit"
 
 [connection signal="pressed" from="VBoxContainer/Host" to="VBoxContainer/join_text_box" method="_on_host_pressed"]
 [connection signal="pressed" from="VBoxContainer/Join" to="VBoxContainer/join_text_box" method="_on_join_pressed"]
-[connection signal="text_changed" from="VBoxContainer/username_box" to="VBoxContainer/join_text_box" method="_on_username_box_text_changed"]
 [connection signal="text_submitted" from="VBoxContainer/join_text_box" to="VBoxContainer/join_text_box" method="_on_join_text_submitted"]
 [connection signal="pressed" from="Exit_Multiplayer" to="." method="_on_exit_multiplayer_pressed"]

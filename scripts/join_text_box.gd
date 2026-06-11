@@ -1,22 +1,17 @@
 extends LineEdit
 
 # Called when the node enters the scene tree for the first time.
-#func _ready() -> void:
-#	visible = false
+func _ready() -> void:
+	visible = false
 	
 
 	
 func _on_join_pressed() -> void:
-	if PlayerOptions.Username == "":
-		$"../../MarginContainer3/errorwarning2".visible = true
-#	visible = true
+	visible = true
 	
 func _on_host_pressed() -> void:
-	if PlayerOptions.Username == "":
-		$"../../MarginContainer2/errorwarning1".visible = true
-	else:
-		NetworkManager.create_server()
-		NetworkManager.lobby_join()
+	NetworkManager.create_server()
+	NetworkManager.lobby_join()
 
 func _on_button_pressed() -> void:
 	_send_test_message.rpc("hi")
@@ -34,7 +29,3 @@ func _on_join_text_submitted(new_text: String) -> void:
 	if int(text) == code:
 		NetworkManager.lobby_join()
 		NetworkManager.create_client()
-
-
-func _on_username_box_text_changed(new_text: String) -> void:
-	PlayerOptions.Username = $"../username_box".text
